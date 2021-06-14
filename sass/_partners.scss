@@ -1,0 +1,41 @@
+/* PERNTERS SECTION WITH ICONS OR LOGOS */
+.partners {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    background-color: $bg-color-box;
+
+    &--header {
+        grid-column: 1 /-1;
+        grid-row: 1;
+        //margin: 10rem 0 0 0;
+        border-top: 1px solid $border-color;
+
+        h1 {
+            margin: 10rem 0;
+            text-align: center;
+        }
+    }
+    &--list {
+        grid-column: 2 / 6;
+        grid-row: 2;
+        margin: 0 5rem;
+        display: flex;
+
+        .brands{
+            flex: 1;
+            
+        }
+    }
+
+    &--footer {
+        grid-column: inherit;
+        grid-row: 3;
+        margin: 10rem;
+        h3 {
+            text-align: center;
+        }
+    }
+}

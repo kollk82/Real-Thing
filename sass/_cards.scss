@@ -1,0 +1,97 @@
+/* CARDS */
+.cards{
+    grid-column: 1 / -1;
+    //grid-row: 3;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background-color: $bg-color-box;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 7em;
+    z-index: 0;
+    &--h1{
+        grid-column: 1 / -1;
+        grid-row: 1;
+        
+        h1{
+            text-align: center;        
+            margin: 5rem;
+        }
+    }
+    &--box{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        vertical-align: middle;
+
+        > *:not(:last-child){
+                border-right: 1px solid $border-color;
+            }   
+
+        .card2 :last-child{
+            margin-top: 2.3rem;
+        }
+        &-card{
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //justify-content: center;            
+            > *:not(:last-child){
+                margin-bottom: 3rem;
+            }    
+            &:nth-child(2){
+                h1{
+                    border: 1px solid $font-primary-icons;
+                }
+                h2{
+                    font-size: 280%;
+                }
+            }                              
+            h2{
+                text-align: center;                
+            }
+            h1{
+                border: 1px solid $color-primary;
+                padding: 1.2rem 2.2rem;
+            }
+            .card-logo{
+                width: 15rem;
+                height: 15rem;
+                background-color: $border-color;
+                border-radius: 50%;
+                border: 1rem solid rgb(75, 75, 75);                
+                background-position: center;
+                background-size: 70%;
+                background-repeat: no-repeat;              
+                transition: all .3s;
+
+                &:hover{
+                    border: 1rem solid $font-primary-icons;                    
+                }
+            }           
+            
+            .logo1-img{
+                margin-top: 7rem;
+                background-image: url('../img/imgs/eagle-logo.png');
+                transform: scaleX(-1);
+                cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='49' height='59' viewport='0 0 100 100' style='fill:black;font-size:29px;'><text y='50%'>\1F44D</text></svg>") 16 0,auto; /*!emojicursor.app*/      
+            }  
+            .logo2-img{
+                background-image: url('../img/imgs/eagle.svg');
+                background-size: 100%;
+                width: 17rem;
+                height: 17rem;
+                border-color: $font-primary-icons;
+                cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='49' height='59' viewport='0 0 100 100' style='fill:black;font-size:29px;'><text y='50%'>\1F60D</text></svg>") 16 0,auto; /*!emojicursor.app*/   
+            }
+            .logo3-img{
+                margin-top: 7rem;
+                background-image: url('../img/imgs/eagle-logo.png');
+                cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='49' height='59' viewport='0 0 100 100' style='fill:black;font-size:29px;'><text y='50%'>\1F60E</text></svg>") 16 0,auto; /*!emojicursor.app*/   
+            }  
+        }
+    }
+}

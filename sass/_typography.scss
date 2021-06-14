@@ -1,0 +1,136 @@
+/* FONTS */
+/* Text font Open Sans and Source Sans Pro GOOGLE FONTS*/
+
+@font-face {
+    font-family: 'MainText';
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'MainText-light';
+    src: url('../fonts/OpenSans/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'MainText-bold';
+    src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'MainText-semibold';
+    src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'MainHeadlines-bold';
+    src: url('../fonts/SourceSansPro/SourceSansPro-Bold.ttf');
+}
+@font-face {
+    font-family: 'MainHeadlines-light';
+    src: url('../fonts/SourceSansPro/SourceSansPro-light.ttf');
+}
+@font-face {
+    font-family: 'MainHeadlines-regular';
+    src: url('../fonts/SourceSansPro/SourceSansPro-regular.ttf');
+}
+
+/* Icons */
+@font-face {
+    font-family: 'solid';
+    src: url('../fonts/webfonts/fa-solid-900.eot');
+    src: url('../fonts/webfonts/fa-solid-900.eot?#iefix')
+            format('embedded-opentype'),
+        url('../fonts/webfonts/fa-solid-900.woff') format('woff'),
+        url('../fonts/webfonts/fa-solid-900.ttf') format('truetype'),
+        url('../fonts/webfonts/fa-solid-900.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'regular';
+    src: url('../fonts/webfonts/fa-regular-400.eot');
+    src: url('../fonts/webfonts/fa-regular-400.eot?#iefix')
+            format('embedded-opentype'),
+        url('../fonts/webfonts/fa-regular-400.woff') format('woff'),
+        url('../fonts/webfonts/fa-regular-400.ttf') format('truetype'),
+        url('../fonts/webfonts/fa-regular-400.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'brands';
+    src: url('../fonts/webfonts/fa-brands-400.eot');
+    src: url('../fonts/webfonts/fa-brands-400.eot?#iefix')
+            format('embedded-opentype'),
+        url('../fonts/webfonts/fa-brands-400.woff') format('woff'),
+        url('../fonts/webfonts/fa-brands-400.ttf') format('truetype'),
+        url('../fonts/webfonts/fa-brands-400.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+i {
+    font-style: normal;
+}
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+.icon-box,
+.icon-box-regular {
+    font-family: 'solid';
+    font-size: 500%;
+    width: 100%;
+    color: $font-primary-icons;
+}
+.icon-box-regular {
+    font-family: 'regular';
+}
+.brands {
+    font-family: 'brands';
+    font-size: 600%;
+    text-align: center;
+    color: #f3f3f3;
+}
+.solid {
+    font-family: 'solid';
+    font-size: 200%;
+    text-align: center;
+    color: #f3f3f3;
+}
+h1 {
+    text-transform: uppercase;
+    font-family: 'MainHeadlines-bold';
+    font-size: 400%;
+    color: darken($color: $color-primary, $amount: 15);
+}
+h2 {
+    font-family: 'MainText-bold';
+    text-transform: uppercase;
+    line-height: 125%;
+    color: darken($color: $color-primary, $amount: 15);
+}
+h3 {
+    font-family: 'MainText-light';
+    text-transform: uppercase;
+    line-height: 100%;
+    letter-spacing: 1rem;
+    color: darken($color: $color-primary, $amount: 15);
+}
+h4 {
+    font-family: 'MainText-bold';
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: darken($color: $color-primary, $amount: 15);
+}
+p {
+    font-family: 'MainHeadlines-light';
+    font-size: 110%;
+    letter-spacing: 0.2rem;
+    line-height: 145%;
+    color: darken($color: $color-primary, $amount: 20);
+}
+.center {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

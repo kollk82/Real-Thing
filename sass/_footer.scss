@@ -1,0 +1,114 @@
+.footer {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-template-rows: auto;
+    background-color: $bg-color-box;
+    border-top: 1px solid $border-color;
+
+    background-image: url('../img/imgs/eagle.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 7rem;
+
+    h4 {
+        text-align: center;
+        margin: 3rem 0 0 0;
+    }
+    &--form {
+        grid-column: 1;
+        grid-row: 1;
+
+        // more form.scss
+        p {
+            font-size: 88%;
+            text-align: left;
+            width: 48%;
+            margin: 2rem auto 0 auto;
+            letter-spacing: 0.2rem;
+        }
+    }
+    &--media {
+        grid-column: 2;
+        grid-row: 1;
+
+        width: 100%;
+
+        .brands {
+            font-size: 200%;
+            color: darken($color: $color-primary, $amount: 60);
+        }
+        .solid {
+            color: darken($color: $color-primary, $amount: 60);
+        }
+        .brands,
+        .solid {
+            &:hover {
+                color: $font-primary-icons;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5rem;
+            justify-content: center;
+            margin-top: 2rem;
+
+            li {
+                margin: 0 1rem;
+                width: 6rem;
+                height: 6rem;
+                text-align: center;
+                transition: all 0.2s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    &--side {
+        grid-column: 3;
+        grid-row: 1;
+        h4 {
+            text-align: center;
+        }
+        &-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            > :not(:first-child):not(:last-child) {
+                margin-left: 4rem;
+                margin-right: 5rem;
+            }
+            ul {
+                li {
+                    margin-top: 1rem;
+                    a {
+                        font-family: 'MainText-light';
+                        font-size: 1.5rem;
+                        color: darken($color: $color-primary, $amount: 30);
+                        letter-spacing: 0.1rem;
+
+                        &:hover {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--bottom {
+        grid-column: 2;
+        grid-row: 3;
+        margin: 15rem 0 5rem;
+    }
+    &--map {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: center;
+    }
+}

@@ -1,0 +1,14 @@
+/*  CONTAINER GRID */
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 100vw));
+    grid-template-rows: auto;
+    //grid-gap: 1rem; 
+}
+// Vue fragments fix - add wrapper div
+.wrapper{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
