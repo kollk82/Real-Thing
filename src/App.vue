@@ -2,61 +2,105 @@
     <!-- GOODIES CONTAINER -->
     <div class="container">
         <!-- HEADER -->
-        <header class="header">           
+        <header class="header">
             <section class="header--top">
                 <!-- Bar for social -> phone , email, ect -->
-                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-linkedin brands"></i></a>
-                <a href="http://www.facebook.com" target="_blank"><i class="fa-facebook-square brands"></i></a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fa-linkedin brands"></i
+                ></a>
+                <a href="http://www.facebook.com" target="_blank"
+                    ><i class="fa-facebook-square brands"></i
+                ></a>
                 <i class="fa-envelope solid"></i>
                 <h4>ceo@eagledesign.com</h4>
                 <i class="fa-phone-square-alt solid"></i>
                 <h4>085 124 1929</h4>
             </section>
             <section class="header--logo"></section>
-            <section  class="header--nav">
+            <section class="header--nav">
                 <!-- Navigation bar -->
-                <div class="header--nav-icon icon" @click="show = !show" ></div>
-                <transition name="custom-classes-transition"
-                            enter-active-class="animate__animated animate__fadeIn"
-                            leave-active-class="animate__animated animate__fadeOut" >         
-                    <div class="header--nav-box" v-if="show">
+                <div class="header--nav-icon icon" @click="show = !show"></div>
+                <transition
+                    name="custom-classes-transition"
+                    enter-active-class="animate__animated animate__fadeIn"
+                    leave-active-class="animate__animated animate__fadeOut"
+                >
+                    <nav class="header--nav-box" v-if="show">
                         <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/">Home</router-link>
+                            <router-link class="nav-header" to="/"
+                                >Home</router-link
+                            >
                         </div>
                         <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/about">About</router-link>
+                            <router-link class="nav-header" to="/about"
+                                >About</router-link
+                            >
                         </div>
                         <div class="header--nav-box_box">
-                            <a class="nav-header" @click="collapse = !collapse">Our Service<span>^</span></a>
-                            <transition name="custom-classes-transition"
-                                        enter-active-class="animate__animated animate__fadeIn"
-                                        leave-active-class="animate__animated animate__fadeOut">
-                            <ul  v-if="collapse">
-                                <li><router-link to="/services/webdesign">Web Design</router-link></li>
-                                <li><router-link to="/services/web-development">Web Development</router-link></li>
-                                <li><router-link to="/services/UX-UI">UX/UI</router-link></li>
-                                <li><router-link to="/services/photography">Photography</router-link></li>
-                                <li><router-link to="/services/videography">Videography</router-link></li>
-                            </ul>
+                            <a class="nav-header" @click="collapse = !collapse"
+                                >Our Service<span>^</span></a
+                            >
+                            <transition
+                                name="custom-classes-transition"
+                                enter-active-class="animate__animated animate__fadeIn"
+                                leave-active-class="animate__animated animate__fadeOut"
+                            >
+                                <ul v-if="collapse">
+                                    <li>
+                                        <router-link to="/services/webdesign"
+                                            >Web Design</router-link
+                                        >
+                                    </li>
+                                    <li>
+                                        <router-link
+                                            to="/services/web-development"
+                                            >Web Development</router-link
+                                        >
+                                    </li>
+                                    <li>
+                                        <router-link to="/services/UX-UI"
+                                            >UX/UI</router-link
+                                        >
+                                    </li>
+                                    <li>
+                                        <router-link to="/services/photography"
+                                            >Photography</router-link
+                                        >
+                                    </li>
+                                    <li>
+                                        <router-link to="/services/videography"
+                                            >Videography</router-link
+                                        >
+                                    </li>
+                                </ul>
                             </transition>
                         </div>
                         <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/portfolio">Portfolio</router-link>
+                            <router-link class="nav-header" to="/portfolio"
+                                >Portfolio</router-link
+                            >
                         </div>
                         <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/contact">Contact</router-link>
+                            <router-link class="nav-header" to="/contact"
+                                >Contact</router-link
+                            >
                         </div>
                         <div class="header--nav-box_box">
-                            <router-link class="nav-quote" to="/quote">Free Quote</router-link>
+                            <router-link class="nav-quote" to="/quote"
+                                >Free Quote</router-link
+                            >
                         </div>
-                    </div>
+                    </nav>
                 </transition>
             </section>
-        </header>     
+        </header>
         <router-view v-slot="{ Component }">
-            <transition name="custom-classes-transition" mode="out-in" appear
-                        enter-active-class="animate__animated  animate__fadeIn"
-                        leave-active-class="animate__animated  animate__fadeOut">
+            <transition
+                name="custom-classes-transition"
+                mode="out-in"
+                appear
+                enter-active-class="animate__animated  animate__fadeIn"
+            >
                 <component :is="Component"></component>
             </transition>
         </router-view>
@@ -65,31 +109,55 @@
             <div class="footer--form">
                 <h4>Sign Up for a Newsletter</h4>
                 <form action="" method="POST" class="sub">
-                    <input type="hidden" name="name" id="name">
+                    <input type="hidden" name="name" id="name" />
                     <div class="skew">
-                        <input type="email" name="email" id="email" placeholder="example@example.com">
-                    </div>                    
-                    <button type="submit" name="submit" class="btn-news">Subscribe</button>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="example@example.com"
+                        />
+                    </div>
+                    <button type="submit" name="submit" class="btn-news">
+                        Subscribe
+                    </button>
                 </form>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa placeat itaque ut sed.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam culpa placeat itaque ut sed.
+                </p>
             </div>
             <div class="footer--media">
                 <h4>Follow Us</h4>
                 <ul>
                     <li>
-                        <a href="http://www.facebook.com" target="_blank"><i class="fa-facebook-square brands"></i></a>
+                        <a href="http://www.facebook.com" target="_blank"
+                            ><i class="fa-facebook-square brands"></i
+                        ></a>
                     </li>
                     <li>
-                        <a href="http://www.instagram.com/clashofcars182" target="_blank"><i class="fa-camera solid"></i></a>
+                        <a
+                            href="http://www.instagram.com/clashofcars182"
+                            target="_blank"
+                            ><i class="fa-camera solid"></i
+                        ></a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCRz3qSzQEpXApP8uAkYVGRw" target="_blank"><i class="fa-video solid"></i></a>
+                        <a
+                            href="https://www.youtube.com/channel/UCRz3qSzQEpXApP8uAkYVGRw"
+                            target="_blank"
+                            ><i class="fa-video solid"></i
+                        ></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com" target="_blank"> <i class="fa-linkedin brands"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank">
+                            <i class="fa-linkedin brands"></i
+                        ></a>
                     </li>
                     <li>
-                        <a href="https://github.com/kollk82"><i class="fa-github-square brands"></i></a>
+                        <a href="https://github.com/kollk82"
+                            ><i class="fa-github-square brands"></i
+                        ></a>
                     </li>
                 </ul>
             </div>
@@ -131,13 +199,13 @@
     </div>
 </template>
 <script>
-    // Toggle component
-    export default {
-        data() {
-            return {
-                show: false,
-                collapse: false,
-            };
-        },
-    };
+// Toggle component
+export default {
+    data() {
+        return {
+            show: false,
+            collapse: false,
+        };
+    },
+};
 </script>

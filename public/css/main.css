@@ -881,37 +881,27 @@ button:active {
 }
 
 .about {
+  grid-column: 1 / -1;
   margin-top: 25rem;
-  height: 100vh;
+  margin-bottom: 2rem;
   width: 100vw;
   background-color: #1a1a1a;
-  position: relative;
 }
 
 .about h1 {
-  position: absolute;
-  top: 5%;
+  text-align: center;
 }
 
 .about--team {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90vw;
+  width: 100vw;
   height: 70vh;
-  /*  > :first-child,
-        > :last-child{
-            background-color: $color-primary;
-        } */
 }
 
 .about--team > :nth-child(2) {
   border-right: 1px solid #494949;
-}
-
-.about--team > :nth-child(3) span {
-  vertical-align: middle;
-  line-height: 1rem;
 }
 
 .about--team .twist {
@@ -925,6 +915,10 @@ button:active {
 .about--team .twist img {
   transform: skew(10deg) !important;
   object-position: 9rem -5rem !important;
+}
+
+.about--team .arrow span {
+  float: right;
 }
 
 .about--team-box {
@@ -944,7 +938,7 @@ button:active {
   overflow: hidden;
   border: 2px solid #b8741c;
   transform: skew(10deg);
-  border-radius: 15px;
+  border-radius: 2rem;
 }
 
 .about--team-box .box--img:hover::before {
@@ -1004,6 +998,7 @@ button:active {
 
 .about--team-box ul li {
   margin: 5rem 0;
+  width: 100%;
 }
 
 .about--team-box ul li p {
@@ -1016,6 +1011,93 @@ button:active {
   color: #b8741c;
   font-size: 160%;
   vertical-align: middle;
+}
+
+.about--wedo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 15rem 20rem 15rem 10rem;
+}
+
+.about--wedo > :nth-child(2) {
+  border-top: 2px solid #b8741c;
+}
+
+.about--wedo-box {
+  border-left: 2px solid #b8741c;
+  border-bottom: 2px solid #b8741c;
+  margin-left: 17.5rem;
+  /* .wedo-txt{
+                //border-left: 1px solid red;
+            } */
+}
+
+.about--wedo-box2 {
+  border-right: 2px solid #b8741c;
+  /* .wedo-txt{
+                //border-right: 1px solid red;
+            } */
+}
+
+.about--wedo-box, .about--wedo-box2 {
+  display: flex;
+  align-items: center;
+  height: 50rem;
+  width: 80%;
+  transform: skew(-10deg);
+  border-bottom: 1px solid #b8741c;
+}
+
+.about--wedo-box .wedo-txt, .about--wedo-box2 .wedo-txt {
+  height: 70%;
+  text-align: center;
+  margin: 0 0rem;
+}
+
+.about--wedo-box .wedo-txt h2, .about--wedo-box2 .wedo-txt h2 {
+  transform: skew(10deg);
+  margin: 4rem;
+}
+
+.about--wedo-box .wedo-txt i, .about--wedo-box2 .wedo-txt i {
+  padding: 9rem;
+  font-family: serif;
+  font-size: 100%;
+  font-family: 'MainHeadlines-light';
+}
+
+.about--wedo-box .wedo-txt p, .about--wedo-box2 .wedo-txt p {
+  margin: 2rem 7rem 0 7rem;
+  transform: skew(10deg);
+  text-align: left;
+  font-size: 120%;
+}
+
+.about--wedo-box .wedo-txt button, .about--wedo-box2 .wedo-txt button {
+  float: right;
+  margin: 4rem 13rem;
+  transform: skew(10deg);
+}
+
+.about--wedo-box .wedo-img, .about--wedo-box2 .wedo-img {
+  border: 2px solid #b8741c;
+  border-radius: 2rem;
+  width: 90rem;
+  height: 35rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.about--wedo-box .wedo-img img, .about--wedo-box2 .wedo-img img {
+  display: flex;
+  position: absolute;
+  width: 130%;
+  top: -8rem;
+  right: -5rem;
+  height: auto;
+  transform: skew(10deg);
 }
 
 .nopage {

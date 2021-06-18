@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div class="center about">
+        <div class="about">
             <h1>Our team</h1>
             <div class="about--team">
                 <div class="about--team-box">
@@ -15,38 +15,39 @@
                             <p><span>&#10094;</span>Project manager</p>
                         </li>
                         <li>
-                            <p>&nbsp;&nbsp;<span>&#10094;</span>SEO</p>
+                            <p><span>&#10094;</span>SEO</p>
                         </li>
                         <li>
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span>&#10094;</span>lorem
-                                ipsum impum lorem
-                            </p>
+                            <p><span>&#10094;</span>lorem ipsum impum lorem</p>
                         </li>
                         <li>
-                            <p>
-                                <span
-                                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10094;</span
-                                >lorem ipsum impum lorem
-                            </p>
+                            <p><span>&#10094;</span>lorem ipsum impum lorem</p>
                         </li>
                     </ul>
                 </div>
-                <div class="about--team-box">
+                <div class="about--team-box arrow">
                     <ul>
                         <li>
                             <p>
-                                Front-End web development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&#10095;</span>
+                                Front-End web development<span>&#10095;</span>
                             </p>
                         </li>
                         <li>
-                            <p>Back-End web development&nbsp;&nbsp;<span>&#10095;</span></p>
+                            <p>
+                                Back-End web development&nbsp;&nbsp;<span
+                                    >&#10095;</span
+                                >
+                            </p>
                         </li>
                         <li>
-                            <p>WordPress, Shopify, AWS&nbsp;&nbsp;&nbsp;<span>&#10095;</span></p>
+                            <p>
+                                WordPress, Shopify, AWS&nbsp;&nbsp;&nbsp;<span
+                                    >&#10095;</span
+                                >
+                            </p>
                         </li>
                         <li>
-                            <p>Custom websites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&#10095;</span></p>
+                            <p>Custom websites<span>&#10095;</span></p>
                         </li>
                     </ul>
                 </div>
@@ -60,12 +61,110 @@
                     </div>
                 </div>
             </div>
-            <div class="about--wedo"></div>
+            <div class="about--wedo">
+                <h1>What we do</h1>
+                <div class="about--wedo-box">
+                    <div class="wedo-txt">
+                        <h2>lorem inpummm</h2>
+                        <i
+                            >"Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit."</i
+                        >
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Reiciendis nulla natus quos, alias odio vero
+                            necessitatibus quisquam quod autem non minima, enim
+                            debitis aliquam dignissimos distinctio tenetur
+                            blanditiis officiis architecto.
+                        </p>
+                        <button class="btn-news">...read more</button>
+                    </div>
+                    <div class="wedo-img">
+                        <img src="img/imgs/designer.png" alt="" />
+                    </div>
+                </div>
+                <div class="about--wedo-box2">
+                    <div class="wedo-img">
+                        <img src="img/imgs/designer.png" alt="" />
+                    </div>
+                    <div class="wedo-txt">
+                        <h2>lorem inpummm</h2>
+                        <i
+                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit."</i
+                        >
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Reiciendis nulla natus quos, alias odio vero
+                            necessitatibus quisquam quod autem non minima, enim
+                            debitis aliquam dignissimos distinctio tenetur
+                            blanditiis officiis architecto.
+                        </p>
+                        <button class="btn-news">...read more</button>
+                    </div>                    
+                </div>
+                <div class="about--wedo-box">
+                    <div class="wedo-txt">
+                        <h2>lorem inpummm</h2>
+                        <i
+                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit."</i
+                        >
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Reiciendis nulla natus quos, alias odio vero
+                            necessitatibus quisquam quod autem non minima, enim
+                            debitis aliquam dignissimos distinctio tenetur
+                            blanditiis officiis architecto.
+                        </p>
+                        <button class="btn-news">...read more</button>
+                    </div>                    
+                    <div class="wedo-img">
+                        <img src="img/imgs/designer.png" alt="" />
+                    </div>
+                </div>
+                <div class="about--wedo-box2">
+                    <div class="wedo-img">
+                        <img src="img/imgs/designer.png" alt="" />
+                    </div>
+                    <div class="wedo-txt">
+                        <h2>lorem inpummm</h2>
+                        <i
+                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit."</i
+                        >
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Reiciendis nulla natus quos, alias odio vero
+                            necessitatibus quisquam quod autem non minima, enim
+                            debitis aliquam dignissimos distinctio tenetur
+                            blanditiis officiis architecto.
+                        </p>
+                        <button class="btn-news">...read more</button>
+                    </div>                    
+                </div>
+                <div class="about--wedo-box">
+                    <div class="wedo-txt">
+                        <h2>lorem inpummm</h2>
+                        <i
+                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit."</i
+                        >
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Reiciendis nulla natus quos, alias odio vero
+                            necessitatibus quisquam quod autem non minima, enim
+                            debitis aliquam dignissimos distinctio tenetur
+                            blanditiis officiis architecto.
+                        </p>
+                        <button class="btn-news">...read more</button>
+                    </div>
+                    
+                    <div class="wedo-img">
+                        <img src="img/imgs/designer.png" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
-<style scope>
-p {
-    z-index: 9999;
-}
-</style>

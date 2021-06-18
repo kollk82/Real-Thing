@@ -1,12 +1,13 @@
 .about {
+    grid-column: 1 / -1;
+
     margin-top: 25rem;
-    height: 100vh;
+    margin-bottom: 2rem;
+    //height: 100vh;
     width: 100vw;
     background-color: $bg-color-box;
-    position: relative;
     h1 {
-        position: absolute;
-        top: 5%;
+        text-align: center;
     }
 
     &--team {
@@ -14,32 +15,27 @@
         align-items: center;
         justify-content: center;
         //outline: 1px solid red;
-        width: 90vw;
+        width: 100vw;
         height: 70vh;
-        //padding: 0 10rem;
-        /*  > :first-child,
-        > :last-child{
-            background-color: $color-primary;
-        } */
+
         > :nth-child(2) {
             border-right: 1px solid $border-color;
         }
-        > :nth-child(3) {
-            span {
-                vertical-align: middle;
-                line-height: 1rem;
+        .twist {
+            transform: skew(-20deg) !important;
+            .box--img-h2dev {
+                transform: skew(10deg) !important;
+            }
+            img {
+                transform: skew(10deg) !important;
+                object-position: 9rem -5rem !important;
             }
         }
-        .twist{
-                transform: skew(-20deg)!important;
-                .box--img-h2dev {                    
-                    transform: skew(10deg)!important;
-                }
-                img{
-                    transform: skew(10deg)!important;
-                    object-position: 9rem -5rem!important;
-                }
+        .arrow {
+            span {
+                float: right;
             }
+        }
         &-box {
             display: flex;
             flex-direction: column;
@@ -48,7 +44,7 @@
             //outline: 1px solid red;
             align-items: center;
             justify-content: center;
-            
+
             .box--img {
                 display: flex;
                 justify-content: center;
@@ -57,7 +53,7 @@
                 overflow: hidden;
                 border: 2px solid $font-primary-icons;
                 transform: skew(10deg);
-                border-radius: 15px;
+                border-radius: 2rem;
 
                 &:hover::before {
                     opacity: 0;
@@ -81,17 +77,18 @@
                     //outline: 1px solid yellow;
                 }
                 &-h2des,
-                &-h2dev{
+                &-h2dev {
                     display: block;
                     position: absolute;
                     z-index: 99;
                     transform: skew(-10deg);
-                    bottom: 47%;  
-                    color: $font-primary-icons;                }
-                &-h2des {                   
-                    left: 15rem;                                                    
+                    bottom: 47%;
+                    color: $font-primary-icons;
                 }
-                &-h2dev {                    
+                &-h2des {
+                    left: 15rem;
+                }
+                &-h2dev {
                     left: 10rem;
                 }
                 img {
@@ -112,6 +109,7 @@
                 li {
                     margin: 5rem 0;
                     //outline: 1px solid rgb(73, 212, 55);
+                    width: 100%;
                     p {
                         width: 100%;
                         font-size: 120%;
@@ -119,9 +117,98 @@
                             margin: 1rem;
                             color: $font-primary-icons;
                             font-size: 160%;
-                            vertical-align: middle;                         
+                            vertical-align: middle;
                         }
                     }
+                }
+            }
+        }
+    }
+    &--wedo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 15rem 20rem 15rem 10rem;
+        //outline: 1px solid red;
+        > :nth-child(2){
+            border-top: 2px solid $font-primary-icons;
+        }
+
+
+        &-box{
+            border-left: 2px solid $font-primary-icons;
+            border-bottom: 2px solid $font-primary-icons; 
+            margin-left: 17.5rem;
+            /* .wedo-txt{
+                //border-left: 1px solid red;
+            } */
+        }
+        &-box2{
+            border-right: 2px solid $font-primary-icons;
+            //border-bottom: 2px solid $font-primary-icons;
+            /* .wedo-txt{
+                //border-right: 1px solid red;
+            } */
+        }
+        &-box,
+        &-box2 {
+            display: flex;
+            align-items: center;
+            height: 50rem;
+            width: 80%;
+            //margin:0 10rem;
+            transform: skew(-10deg);
+            //border-top: 1px solid green;
+            border-bottom: 1px solid $font-primary-icons;   
+
+            .wedo-txt {
+                height: 70%;
+                //width: auto;
+                //border-top: 1px solid red;
+                //border-bottom: 1px solid red;
+                text-align: center;
+                margin: 0 0rem; 
+                h2{
+                    transform: skew(10deg);
+                    margin: 4rem;
+                }
+                i{
+                    padding: 9rem;
+                    font-family: serif;
+                    font-size: 100%;
+                    font-family: 'MainHeadlines-light';
+                }
+                p {
+                    margin: 2rem 7rem 0 7rem;
+                    transform: skew(10deg);
+                    text-align: left;   
+                    font-size: 120%;
+                }
+                button{
+                    float: right;
+                    margin: 4rem 13rem;
+                    transform: skew(10deg);
+                }
+            }
+
+            .wedo-img {
+                border: 2px solid $font-primary-icons;
+                border-radius: 2rem;
+                width: 90rem;
+                height: 35rem;
+                //margin-left: 4rem;
+                overflow: hidden;
+                position: relative;
+                img {
+                    display: flex;
+                    position: absolute;
+                    width: 130%;
+                    top: -8rem;
+                    right: -5rem;
+                    height: auto;
+                    transform: skew(10deg);
+
                 }
             }
         }

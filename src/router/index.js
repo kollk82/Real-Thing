@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import NotFound from '../views/NotFound.vue'
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
     {
@@ -101,12 +101,24 @@ const routes = [
     {
         path: '/:catchAll(.*)',
         component: NotFound,
-    }
+    },
 ];
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
+
+    // Fix for not scrolling to top of the page while changing routes
+
+    scrollBehavior(to, from, savedPosition) {
+        console.log(savedPosition);
+        console.log(to, from);
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { left: 0, top: 0 };  //Vue's documentation x:0, y:0 didn't work
+        }
+    },
 });
 
 export default router;
