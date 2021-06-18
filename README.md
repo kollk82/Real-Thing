@@ -10,7 +10,7 @@
  SEO will suffer No HTML content = no SEO :cold_sweat:  
 
 
- 06/08/2021 update
+ 16/06/2021 update
  * Back from work 😫 just pushing changes from few deys back to git. 
  * Issue with Scroll behavior on routers fixed with scrollBehavior function but didn't work with x, y  
    had to look arount for solution. Found it somewhere in comments that it could work with top, left  
