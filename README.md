@@ -8,3 +8,13 @@
  What about the content :confused: Lorem :grin:  
  Single page app.    
  SEO will suffer No HTML content = no SEO :cold_sweat:  
+
+
+ 06/08/2021 update
+ * Back from work 😫 just pushing changes from few deys back to git. 
+ * Issue with Scroll behavior on routers fixed with scrollBehavior function but didn't work with x, y  
+   had to look arount for solution. Found it somewhere in comments that it could work with top, left  
+   and it does work.  
+ * Was going through Job adds and in one of them they where asking for Tailwindcss css framework.  
+   Looked at docs and will do something with this over the weekend. 🙃
+
