@@ -6,5 +6,5 @@
  Going with the flow.  
  Sketch it first.  
  What about the content :confused: Lorem :grin:  
- Single page app that is so clever.  
+ Single page app.    
  SEO will suffer No HTML content = no SEO :cold_sweat:  
