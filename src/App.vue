@@ -99,7 +99,9 @@
                 name="custom-classes-transition"
                 mode="out-in"
                 appear
-                enter-active-class="animate__animated  animate__fadeIn"
+                enter-active-class="animate__animated  animate__slideInLeft"
+                leave-active-class="animate__animated  animate__slideOutRight"
+
             >
                 <component :is="Component"></component>
             </transition>

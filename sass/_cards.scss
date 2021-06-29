@@ -38,7 +38,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            //justify-content: center;            
+                       
             > *:not(:last-child){
                 margin-bottom: 3rem;
             }    
@@ -50,12 +50,26 @@
                     font-size: 280%;
                 }
             }                              
-            h2{
-                text-align: center;                
-            }
             h1{
                 border: 1px solid $color-primary;
                 padding: 1.2rem 2.2rem;
+            }
+            p{
+                display: block;
+                text-align: left;
+                width: 100%;
+                position: relative;
+                padding-left: 8rem;
+
+                &::after{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 5rem;
+                    content: '\2714';
+                    color: green;
+                }
+                
             }
             .card-logo{
                 width: 15rem;

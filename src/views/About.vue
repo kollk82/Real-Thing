@@ -3,14 +3,14 @@
         <div class="about">
             <h1>Our team</h1>
             <div class="about--team">
-                <div class="about--team-box">
+                <div class="about--team-box">                    
                     <div class="box--img">
-                        <h2 class="box--img-h2des">Design</h2>
                         <img src="img/imgs/designer.png" alt="Designer" />
                     </div>
                 </div>
                 <div class="about--team-box">
-                    <ul>
+                    <h2>Design</h2>
+                    <ul>                        
                         <li>
                             <p><span>&#10094;</span>Project manager</p>
                         </li>
@@ -25,7 +25,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about--team-box arrow">
+                <div class="about--team-box">
+                    <h2>Development</h2>
                     <ul>
                         <li>
                             <p>
@@ -51,9 +52,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about--team-box twist">
+                <div class="about--team-box">
                     <div class="box--img">
-                        <h2 class="box--img-h2dev">Development</h2>
                         <img
                             src="img/imgs/web-developer.png"
                             alt="Web-Develpoer"
@@ -77,38 +77,21 @@
                             debitis aliquam dignissimos distinctio tenetur
                             blanditiis officiis architecto.
                         </p>
-                        <button class="btn-news">...read more</button>
                     </div>
                     <div class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
+                        <h4>
+                            &#8220;Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.&#8221;
+                        </h4>
                     </div>
-                </div>
-                <div class="about--wedo-box2">
-                    <div class="wedo-img">
-                        <img src="img/imgs/designer.png" alt="" />
-                    </div>
-                    <div class="wedo-txt">
-                        <h2>lorem inpummm</h2>
-                        <i
-                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit."</i
-                        >
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Reiciendis nulla natus quos, alias odio vero
-                            necessitatibus quisquam quod autem non minima, enim
-                            debitis aliquam dignissimos distinctio tenetur
-                            blanditiis officiis architecto.
-                        </p>
-                        <button class="btn-news">...read more</button>
-                    </div>                    
                 </div>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
                         <h2>lorem inpummm</h2>
                         <i
-                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit."</i
+                            >"Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit."</i
                         >
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -117,38 +100,21 @@
                             debitis aliquam dignissimos distinctio tenetur
                             blanditiis officiis architecto.
                         </p>
-                        <button class="btn-news">...read more</button>
-                    </div>                    
+                    </div>
                     <div class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
+                        <h4>
+                            &#8220;Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.&#8221;
+                        </h4>
                     </div>
-                </div>
-                <div class="about--wedo-box2">
-                    <div class="wedo-img">
-                        <img src="img/imgs/designer.png" alt="" />
-                    </div>
-                    <div class="wedo-txt">
-                        <h2>lorem inpummm</h2>
-                        <i
-                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit."</i
-                        >
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Reiciendis nulla natus quos, alias odio vero
-                            necessitatibus quisquam quod autem non minima, enim
-                            debitis aliquam dignissimos distinctio tenetur
-                            blanditiis officiis architecto.
-                        </p>
-                        <button class="btn-news">...read more</button>
-                    </div>                    
                 </div>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
                         <h2>lorem inpummm</h2>
                         <i
-                            >"Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit."</i
+                            >"Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit."</i
                         >
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -157,11 +123,36 @@
                             debitis aliquam dignissimos distinctio tenetur
                             blanditiis officiis architecto.
                         </p>
-                        <button class="btn-news">...read more</button>
                     </div>
-                    
                     <div class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
+                        <h4>
+                            &#8220;Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.&#8221;
+                        </h4>
+                    </div>
+                </div>
+                <div class="about--wedo-box">
+                    <div class="wedo-txt">
+                        <h2>lorem inpummm</h2>
+                        <i
+                            >"Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit."</i
+                        >
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Reiciendis nulla natus quos, alias odio vero
+                            necessitatibus quisquam quod autem non minima, enim
+                            debitis aliquam dignissimos distinctio tenetur
+                            blanditiis officiis architecto.
+                        </p>
+                    </div>
+                    <div class="wedo-img">
+                        <img src="img/imgs/designer.png" alt="" />
+                        <h4>
+                            &#8220;Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.&#8221;
+                        </h4>
                     </div>
                 </div>
             </div>

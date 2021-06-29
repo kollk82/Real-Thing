@@ -96,37 +96,33 @@ a {
     text-align: center;
     color: #f3f3f3;
 }
+h1, h2, h3, h4, p{color: $color-primary;}
 h1 {
     text-transform: uppercase;
     font-family: 'MainHeadlines-bold';
     font-size: 400%;
-    color: darken($color: $color-primary, $amount: 15);
 }
 h2 {
     font-family: 'MainText-bold';
     text-transform: uppercase;
     line-height: 125%;
-    color: darken($color: $color-primary, $amount: 15);
 }
 h3 {
     font-family: 'MainText-light';
     text-transform: uppercase;
     line-height: 100%;
     letter-spacing: 1rem;
-    color: darken($color: $color-primary, $amount: 15);
 }
 h4 {
     font-family: 'MainText-bold';
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    color: darken($color: $color-primary, $amount: 15);
 }
 p {
     font-family: 'MainHeadlines-light';
     font-size: 110%;
     letter-spacing: 0.2rem;
     line-height: 145%;
-    color: darken($color: $color-primary, $amount: 20);
 }
 .center {
     grid-column: 1 / -1;

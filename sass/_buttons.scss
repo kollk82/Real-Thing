@@ -21,16 +21,7 @@ button{
     }
 }
 .btn{
-    outline: none;
-    border: none;
-    width: max-content;
-    padding: 1.5rem;
-    //height: auto;
     background-color:$font-primary-icons;
-    border-radius: .2rem;
-    cursor: pointer;
-    font-family: 'MainText';
-    transition: all .2s;
 
     &:hover{
         background-color:$color-btn;
