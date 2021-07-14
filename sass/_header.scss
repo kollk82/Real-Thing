@@ -6,7 +6,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);
     position: relative;
-    
+
     &--top {
         grid-column: 1 / -1;
         grid-row: 1;
@@ -106,19 +106,20 @@
         width: 100%;
         text-align: center;
     }
-    &-para {
+    &-box {
         flex: 1;
-        /* display: flex;
-        flex-direction: column; */
-        font-family: 'MainHeadlines-light';
-        font-size: 110%;
-        letter-spacing: 0.2rem;
-        line-height: 145%;
-        padding: 4%;
         background-color: rgba(88, 88, 88, 0.2);
-    }
-    button {
-        margin-top: 3rem;
+        padding: 4%;
+
+        p {
+            font-family: 'MainHeadlines-light';
+            font-size: 110%;
+            letter-spacing: 0.2rem;
+            line-height: 145%;
+            
+        }
+        button {
+           margin-top: 3rem;
+        }
     }
 }
-

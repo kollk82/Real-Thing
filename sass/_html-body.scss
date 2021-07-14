@@ -12,6 +12,9 @@ html {
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-size: 1.6rem;
     max-width: 100vw;

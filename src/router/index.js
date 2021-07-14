@@ -24,7 +24,9 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Portfolio.vue'),
+            import(
+                /* webpackChunkName: "portfolio" */ '../views/Portfolio.vue'
+            ),
     },
     {
         path: '/quote',
@@ -33,7 +35,7 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Quote.vue'),
+            import(/* webpackChunkName: "quote" */ '../views/Quote.vue'),
     },
     {
         path: '/Contact',
@@ -42,7 +44,7 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Contact.vue'),
+            import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
     },
     {
         path: '/services/webdesign',
@@ -51,7 +53,9 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Webdesign.vue'),
+            import(
+                /* webpackChunkName: "webdesign" */ '../views/Webdesign.vue'
+            ),
     },
     {
         path: '/services/web-development',
@@ -60,7 +64,7 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Webdev.vue'),
+            import(/* webpackChunkName: "webdev" */ '../views/Webdev.vue'),
     },
     {
         path: '/services/UX-UI',
@@ -69,7 +73,7 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Uxui.vue'),
+            import(/* webpackChunkName: "uxui" */ '../views/Uxui.vue'),
     },
     {
         path: '/services/photography',
@@ -78,17 +82,23 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Photography.vue'),
+            import(
+                /* webpackChunkName: "photohgraphy" */ '../views/Photography.vue'
+            ),
     },
     {
         path: '/services/videography',
         name: 'video',
+
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Videography.vue'),
+            import(
+                /* webpackChunkName: "videography" */ '../views/Videography.vue'
+            ),
     },
+
     {
         path: '/services/dronography',
         name: 'dron',
@@ -96,7 +106,9 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import(/* webpackChunkName: "about" */ '../views/Dronography.vue'),
+            import(
+                /* webpackChunkName: "dronography" */ '../views/Dronography.vue'
+            ),
     },
     {
         path: '/:catchAll(.*)',
@@ -114,11 +126,10 @@ const router = createRouter({
         console.log(savedPosition);
         console.log(to, from);
         if (savedPosition) {
-            return savedPosition
+            return savedPosition;
         } else {
-            return { left: 0, top: 0 };  //Vue's documentation x:0, y:0 didn't work
+            return { left: 0, top: 0 }; //Vue's documentation x:0, y:0 didn't work
         }
     },
 });
-
 export default router;

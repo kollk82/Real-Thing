@@ -21,6 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-*jpg
-*png
-*svg
+*.jpg
+*.png
+*.svg

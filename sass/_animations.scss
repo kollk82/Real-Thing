@@ -1,0 +1,11 @@
+@keyframes loaderAnimation {
+    from {
+        //background-color: $font-primary-icons;
+        transform: rotate(0deg);
+       
+    }
+    to {
+        //background-color: $font-primary-icons;
+        transform: rotate(-360deg);
+    }
+}

@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <div class="loader" v-if="loading"><div></div></div>
         <div class="center">
             <form action="" method="POST" class="contact">
                 <h1>Contact Form</h1>
@@ -39,3 +40,10 @@
         </div>
     </div>
 </template>
+
+<script>
+import loader from '../mixins/loader';
+export default {
+    extends: loader,
+};
+</script>

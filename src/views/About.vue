@@ -1,16 +1,17 @@
 <template>
     <div class="wrapper">
+        <div v-if="loading" class="loader"><div></div></div>
         <div class="about">
-            <h1>Our team</h1>
+            <h1>Meet our team</h1>
             <div class="about--team">
-                <div class="about--team-box">                    
-                    <div class="box--img">
+                <div class="about--team-box">
+                    <div v-scrollanimation class="box--img">
                         <img src="img/imgs/designer.png" alt="Designer" />
                     </div>
                 </div>
                 <div class="about--team-box">
-                    <h2>Design</h2>
-                    <ul>                        
+                    <h2 v-scrollanimation>Design</h2>
+                    <ul v-scrollanimation>
                         <li>
                             <p><span>&#10094;</span>Project manager</p>
                         </li>
@@ -26,8 +27,8 @@
                     </ul>
                 </div>
                 <div class="about--team-box">
-                    <h2>Development</h2>
-                    <ul>
+                    <h2 v-scrollanimation>Development</h2>
+                    <ul v-scrollanimation>
                         <li>
                             <p>
                                 Front-End web development<span>&#10095;</span>
@@ -53,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="about--team-box">
-                    <div class="box--img">
+                    <div v-scrollanimation class="box--img">
                         <img
                             src="img/imgs/web-developer.png"
                             alt="Web-Develpoer"
@@ -62,15 +63,15 @@
                 </div>
             </div>
             <div class="about--wedo">
-                <h1>What we do</h1>
+                <h1>What do we do</h1>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
-                        <h2>lorem inpummm</h2>
-                        <i
+                        <h2 v-scrollanimation>lorem inpummm</h2>
+                        <i v-scrollanimation
                             >"Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit."</i
                         >
-                        <p>
+                        <p v-scrollanimation>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Reiciendis nulla natus quos, alias odio vero
                             necessitatibus quisquam quod autem non minima, enim
@@ -78,7 +79,7 @@
                             blanditiis officiis architecto.
                         </p>
                     </div>
-                    <div class="wedo-img">
+                    <div v-scrollanimation class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
                         <h4>
                             &#8220;Lorem ipsum dolor sit, amet consectetur
@@ -88,12 +89,12 @@
                 </div>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
-                        <h2>lorem inpummm</h2>
-                        <i
+                        <h2 v-scrollanimation>lorem inpummm</h2>
+                        <i v-scrollanimation
                             >"Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit."</i
                         >
-                        <p>
+                        <p v-scrollanimation>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Reiciendis nulla natus quos, alias odio vero
                             necessitatibus quisquam quod autem non minima, enim
@@ -101,7 +102,7 @@
                             blanditiis officiis architecto.
                         </p>
                     </div>
-                    <div class="wedo-img">
+                    <div v-scrollanimation class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
                         <h4>
                             &#8220;Lorem ipsum dolor sit, amet consectetur
@@ -111,12 +112,12 @@
                 </div>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
-                        <h2>lorem inpummm</h2>
-                        <i
+                        <h2 v-scrollanimation>lorem inpummm</h2>
+                        <i v-scrollanimation
                             >"Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit."</i
                         >
-                        <p>
+                        <p v-scrollanimation>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Reiciendis nulla natus quos, alias odio vero
                             necessitatibus quisquam quod autem non minima, enim
@@ -124,7 +125,7 @@
                             blanditiis officiis architecto.
                         </p>
                     </div>
-                    <div class="wedo-img">
+                    <div v-scrollanimation class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
                         <h4>
                             &#8220;Lorem ipsum dolor sit, amet consectetur
@@ -134,12 +135,12 @@
                 </div>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
-                        <h2>lorem inpummm</h2>
-                        <i
+                        <h2 v-scrollanimation>lorem inpummm</h2>
+                        <i v-scrollanimation
                             >"Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit."</i
                         >
-                        <p>
+                        <p v-scrollanimation>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Reiciendis nulla natus quos, alias odio vero
                             necessitatibus quisquam quod autem non minima, enim
@@ -147,7 +148,7 @@
                             blanditiis officiis architecto.
                         </p>
                     </div>
-                    <div class="wedo-img">
+                    <div v-scrollanimation class="wedo-img">
                         <img src="img/imgs/designer.png" alt="" />
                         <h4>
                             &#8220;Lorem ipsum dolor sit, amet consectetur
@@ -159,3 +160,11 @@
         </div>
     </div>
 </template>
+
+<script>
+import loader from '../mixins/loader';
+
+export default {
+    extends: loader,
+};
+</script>

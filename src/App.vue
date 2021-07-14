@@ -1,6 +1,7 @@
 <template>
     <!-- GOODIES CONTAINER -->
     <div class="container">
+        <div v-if="loading" class="loader"><div></div></div>
         <!-- HEADER -->
         <header class="header">
             <section class="header--top">
@@ -22,8 +23,8 @@
                 <div class="header--nav-icon icon" @click="show = !show"></div>
                 <transition
                     name="custom-classes-transition"
-                    enter-active-class="animate__animated animate__fadeIn"
-                    leave-active-class="animate__animated animate__fadeOut"
+                    enter-active-class="animate__animated animate__slideInRight"
+                    leave-active-class="animate__animated animate__slideOutRight"
                 >
                     <nav class="header--nav-box" v-if="show">
                         <div class="header--nav-box_box">
@@ -36,7 +37,7 @@
                                 >About</router-link
                             >
                         </div>
-                        <div class="header--nav-box_box">
+                        <!-- <div class="header--nav-box_box">
                             <a class="nav-header" @click="collapse = !collapse"
                                 >Our Service<span>^</span></a
                             >
@@ -74,7 +75,7 @@
                                     </li>
                                 </ul>
                             </transition>
-                        </div>
+                        </div> -->
                         <div class="header--nav-box_box">
                             <router-link class="nav-header" to="/portfolio"
                                 >Portfolio</router-link
@@ -99,9 +100,8 @@
                 name="custom-classes-transition"
                 mode="out-in"
                 appear
-                enter-active-class="animate__animated  animate__slideInLeft"
-                leave-active-class="animate__animated  animate__slideOutRight"
-
+                enter-active-class="animate__animated  animate__fadeIn"
+                leave-active-class="animate__animated  animate__fadeOut"
             >
                 <component :is="Component"></component>
             </transition>
@@ -207,7 +207,18 @@ export default {
         return {
             show: false,
             collapse: false,
+            loading: true,
         };
+    },
+    mounted() {
+        this.load();
+    },
+    methods: {
+        load() {
+            setTimeout(() => {
+                this.loading = false;
+            }, 1000);
+        },
     },
 };
 </script>

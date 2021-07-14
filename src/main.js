@@ -1,5 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import ScrollAnimation from './directives/scrollanimation';
+const app = createApp(App)
 
-createApp(App).use(router).mount('#app')
+app.directive('scrollanimation', ScrollAnimation);
+app.use(router).mount('#app');

@@ -1,6 +1,6 @@
 /* FONTS */
 /* Text font Open Sans and Source Sans Pro GOOGLE FONTS*/
-
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
 @font-face {
     font-family: 'MainText';
     src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
@@ -96,10 +96,16 @@ a {
     text-align: center;
     color: #f3f3f3;
 }
-h1, h2, h3, h4, p{color: $color-primary;}
+h1,
+h2,
+h3,
+h4,
+p {
+    color: $color-primary;
+}
 h1 {
     text-transform: uppercase;
-    font-family: 'MainHeadlines-bold';
+    font-family: 'Cabin Sketch', cursive;
     font-size: 400%;
 }
 h2 {
@@ -126,7 +132,98 @@ p {
 }
 .center {
     grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
+}
+.vh-100{
+    height: 100vh;
+}
+//
+
+h1.before-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+h1.enter {
+    opacity: 1;
+    transform: translateX(0px);
+}
+h2.before-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+h2.enter {
+    opacity: 1;
+    transform: translateY(0px);
+}
+ul.before-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+ul.enter {
+    opacity: 1;
+    transform: translateY(0px);
+}
+p.before-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+p.enter {
+    opacity: 1;
+    transform: translateY(0px);
+}
+i.before-enter,
+.btn-anime.before-enter {
+    display: block;
+    width: max-content;
+    height: auto;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+i.enter,
+.btn-anime.enter {
+    display: block;
+    opacity: 1;
+    width: max-content;
+    height: auto;
+}
+.before-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+.enter {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.anime-box1.before-enter {
+    transform: translateX(-20px);
+}
+.anime-box1.enter {
+    transform: translateX(0px);
+}
+.anime-box2.before-enter {
+    transform: translateY(20px);
+}
+.anime-box2.enter {
+    transform: translateY(0px);
+}
+.anime-box3.before-enter,
+.btn-anime.before-enter {
+    transform: translateX(20px);
+}
+.anime-box3.enter,
+.btn-anime.enter {
+    transform: translateX(0px);
 }
