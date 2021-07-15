@@ -4,13 +4,93 @@
         display: flex;
         flex-direction: column;
         width: 75vw;
+        height: auto;
         margin: auto;
-        outline: 1px solid red;
+        padding: 5rem;
+        border: 2px solid $font-primary-icons;
+        //border-top: 2px solid $font-primary-icons;
+        //border-bottom: 2px solid $font-primary-icons;
+        border-radius: 3rem;
+        margin-bottom: 3rem;
+        //outline: 1px solid red;
         &--box {
             display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             width: 100%;
-            height: 100vh;
-            outline: 1px solid red;
+            height: auto;
+            margin: 0 0 10rem 0;
+            //outline: 1px solid blueviolet;
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                :first-child {
+                    border-radius: 0 3rem 3rem 0;
+                }
+                :last-child:not(button) {
+                    border-radius: 2rem 0 0 2rem;
+                }
+                h1.before-enter {
+                    opacity: 0;
+                    transform: translate(20px);
+                    transition: all 1s ease-in-out;
+                    transition-delay: 0.5s;
+                }
+                h1.enter {
+                    opacity: 1;
+                    transform: translate(0px);
+                }
+                p.before-enter {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: all 1s ease-in-out;
+                    transition-delay: 0.5s;
+                }
+                p.enter {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: justify;
+            }
+            &-one,
+            &-two {
+                display: flex;
+                flex: 1 0 40rem;
+                justify-content: space-evenly;
+               // border: 1px solid orange;
+
+                button.before-enter {
+                    opacity: 0;
+                    transform: translate(20px);
+                    transition: all 1s ease-in-out;
+                    transition-delay: 0.5s;
+                }
+                button.enter {
+                    opacity: 1;
+                    transform: translate(0px);
+                }
+            }
+            &-one {
+                flex-direction: column;
+                * {
+                    margin: 2rem auto;
+                    width: 50%;
+                }
+            }
+            &-two {
+                height: 100%;
+                overflow: hidden;
+                img {
+                    width: 40.7%;
+                    margin-top: 6rem;
+                }
+            }
         }
     }
 }
