@@ -1,90 +1,91 @@
-.header {
-    //position: relative;
-
-    &--nav {
-        position: fixed;
-        right: 0rem;
-        top: 3rem;
+.navbar {
+    display: block;
+    position: fixed;
+    right: 0rem;
+    top: 4rem;
+    height: 10rem;
+    z-index: 999;
+    cursor: pointer;
+    &-icon {
         display: block;
-        z-index: 9999;
-        cursor: pointer;
-
-        &-icon {
+        position: absolute;
+        right: 0rem;
+        width: 2.5rem;
+        height: 10rem;
+        background-color: $font-primary-icons;
+        transition: all 0.3s ease-out;
+        &::before {
             display: block;
-            position: absolute;
-            right: 0rem;
-            top: 1rem;
-            width: 2.5rem;
-            height: 10rem;
-            background-color: $font-primary-icons;
-            //transform: rotate(-90deg);
-            //border-radius: 50%;
-            transition: all 0.3s ease-out;
-            //background-color: $bg-color;
-
+            position: relative;
+            content: 'NAVBAR';
+            transform: rotate(90deg);
+            font-size: 100%;
+            color: $bg-color-box;
+            letter-spacing: 0.4rem;
+            margin-top: 1rem;
+            transition: color 0.3s ease-out, transform 0.3s ease-in-out;
+        }
+        &:hover {
+            background-color: $color-primary;
             &::before {
-                display: block;
-                position: relative;
-                content: 'NAVBAR';
-                transform: rotate(90deg);
-                font-size: 100%;
-                color: $bg-color-box;
-                letter-spacing: 0.4rem;
-                margin-top: 1rem;
-                transition: color 0.3s ease-out, transform 0.3s ease-in-out;
+                color: $font-primary-icons;
             }
-            &:hover {
-                //background-color: $font-primary-icons;
-                &::before {
-                    color: inherit;
-                    //transform: rotate(90deg);
-                }
+        }&:active{
+            background-color: $font-primary-icons;
+            &::before {
+                color: $font-primary-icons;
             }
         }
-        &-box {
+    }
+    &-box {
+        display: flex;
+        position: relative;
+        right: 2.5rem;
+        top: 1rem;
+        width: 100%;
+        //background-color: $bg-color;
+        //border-bottom: 1px solid $font-primary-icons;
+        &_box {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            right: 2.5rem;
-            top: 1rem;
-            width: 100%;
-            height: 10rem;
-            background-color: $bg-color-box;
-            border-top: 2px solid $font-primary-icons;
-            border-bottom: 2px solid $font-primary-icons;
-            border-radius: 2rem 0 0 2rem;
-            &_box {
-                display: block;
-                padding: 2rem;
-                font-size: 100%;
-                .nav-header,
-                .nav-quote {
-                    height: 100%;
-                    letter-spacing: 0.1rem;
-                    text-transform: uppercase;
-                }
-                .nav-quote {
-                    color: rgb(209, 47, 47);
-                    transition: all 0.2s ease-out;
-                    &:hover {
-                        color: $color-secondary;
-                    }
-                }
-                // Vue active state
-                .router-link-exact-active {
-                    display: block;
-                    color: $color-secondary !important;
-                }
-
-                .nav-header {
-                    color: $font-primary-icons;
-                    transition: all 0.2s;
-                    &:hover {
-                        color: red;
-                    }
+            align-content: center;
+            font-size: 100%;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            :not(.nav-quote) {
+                border-bottom: 1px solid $font-primary-icons;
+                border-radius: 1rem;
+            }
+            .nav-header,
+            .nav-quote {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15rem;
+                margin: 1.5rem;
+                background-color: $bg-color-box;
+            }
+            .nav-header {
+                position: relative;
+                padding: 1rem;
+                color: $font-primary-icons;
+                transition: color 0.3s ease-in-out,
+                    background-color 0.3s ease-in-out;
+                &:hover {
+                    color: $bg-color;
+                    background-color: $font-primary-icons;
                 }
             }
+            .nav-quote {
+                color: $color-primary;
+                transition: all 0.2s ease-out;
+                &:hover {
+                    color: red;
+                }
+            }
+        } // Vue active state
+        .router-link-exact-active {
+            color: $bg-color-box !important;
+            background-color: $font-primary-icons;
         }
     }
 }

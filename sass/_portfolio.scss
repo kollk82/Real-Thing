@@ -1,69 +1,83 @@
 .portfolio {
     grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    &--h1 {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 33vh;
+        position: relative;
+        z-index: 1;
+        h1 {
+            display: block;
+            position: absolute;
+            bottom: -5.5rem;
+            border: 1px solid $font-primary-icons;
+            padding: 2rem;
+            border-radius: 3rem 3rem 0 0;
+            background-color: $bg-color-box;
+            z-index: 2;
+        }
+    }
+
     .section {
+        grid-column: 1 / -1;
+        grid-row: 2;
         display: flex;
         flex-direction: column;
-        width: 75vw;
+        width: 85vw;
         height: auto;
-        margin: auto;
-        padding: 5rem;
-        border: 2px solid $font-primary-icons;
-        //border-top: 2px solid $font-primary-icons;
-        //border-bottom: 2px solid $font-primary-icons;
-        border-radius: 3rem;
-        margin-bottom: 3rem;
-        //outline: 1px solid red;
+        margin: 0 auto;
+
         &--box {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             flex-wrap: wrap;
             width: 100%;
-            height: auto;
-            margin: 0 0 10rem 0;
-            //outline: 1px solid blueviolet;
+            height: 50vh;
+            margin-bottom: 6rem;
+
             &:nth-child(even) {
                 flex-direction: row-reverse;
-                :first-child {
-                    border-radius: 0 3rem 3rem 0;
+                &:nth-child(even) {
+                    border-left: 2px solid $font-primary-icons;
+                    border-bottom: 2px solid $font-primary-icons;
+                    border-radius: 5rem 0 5rem 5rem;
                 }
-                :last-child:not(button) {
-                    border-radius: 2rem 0 0 2rem;
-                }
-                h1.before-enter {
-                    opacity: 0;
-                    transform: translate(20px);
-                    transition: all 1s ease-in-out;
-                    transition-delay: 0.5s;
-                }
-                h1.enter {
-                    opacity: 1;
-                    transform: translate(0px);
-                }
-                p.before-enter {
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: all 1s ease-in-out;
-                    transition-delay: 0.5s;
-                }
-                p.enter {
-                    opacity: 1;
-                    transform: translateY(0px);
+                &:last-child {
+                    border-bottom: 2px solid $font-primary-icons;
+                    border-radius: 5rem;
                 }
             }
-            h1 {
-                text-align: center;
+            &:nth-child(odd) {
+                &:nth-child(odd) {
+                    border-right: 2px solid $font-primary-icons;
+                    border-top: 2px solid $font-primary-icons;
+                    border-radius: 5rem 5rem 5rem 0;
+                }
             }
             p {
-                text-align: justify;
+                text-align: left;
+                font-size: 100%;
             }
             &-one,
             &-two {
                 display: flex;
                 flex: 1 0 40rem;
-                justify-content: space-evenly;
-               // border: 1px solid orange;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: max-content;
+                
+                button {
+                    width: 15%;
+                    margin-right: auto;
+                    margin-left: 11.5rem;
+                }
 
                 button.before-enter {
                     opacity: 0;
@@ -78,17 +92,18 @@
             }
             &-one {
                 flex-direction: column;
+
                 * {
-                    margin: 2rem auto;
-                    width: 50%;
+                    margin: 2rem 0;
+                    width: 70%;
                 }
             }
             &-two {
-                height: 100%;
                 overflow: hidden;
+
                 img {
-                    width: 40.7%;
-                    margin-top: 6rem;
+                    width: auto;
+                    height: 50%;
                 }
             }
         }

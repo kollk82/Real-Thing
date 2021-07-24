@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <navBar></navBar>
         <div v-if="loading" class="loader"><div></div></div>
         <div class="about">
             <h1>Meet our team</h1>

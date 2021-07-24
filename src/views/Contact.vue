@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <navBar></navBar>
         <div class="loader" v-if="loading"><div></div></div>
         <div class="center">
             <form action="" method="POST" class="contact">

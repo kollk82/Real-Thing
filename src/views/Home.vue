@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <navBar></navBar>
         <div v-if="loading" class="loader"><div></div></div>
         <section class="carousel">
             <div class="carousel--box">
@@ -193,9 +194,11 @@
 </template>
 
 <script>
+import navBar from '../components/navBar.vue';
 import loader from '../mixins/loader';
 
 export default {
+  components: { navBar },
     extends: loader,
 };
 </script>

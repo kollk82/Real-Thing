@@ -18,82 +18,6 @@
                 <h4>085 124 1929</h4>
             </section>
             <section class="header--logo"></section>
-            <section class="header--nav">
-                <!-- Navigation bar -->
-                <div class="header--nav-icon icon" @click="show = !show"></div>
-                <transition
-                    name="custom-classes-transition"
-                    enter-active-class="animate__animated animate__slideInRight"
-                    leave-active-class="animate__animated animate__slideOutRight"
-                >
-                    <nav class="header--nav-box" v-if="show">
-                        <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/"
-                                >Home</router-link
-                            >
-                        </div>
-                        <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/about"
-                                >About</router-link
-                            >
-                        </div>
-                        <!-- <div class="header--nav-box_box">
-                            <a class="nav-header" @click="collapse = !collapse"
-                                >Our Service<span>^</span></a
-                            >
-                            <transition
-                                name="custom-classes-transition"
-                                enter-active-class="animate__animated animate__fadeIn"
-                                leave-active-class="animate__animated animate__fadeOut"
-                            >
-                                <ul v-if="collapse">
-                                    <li>
-                                        <router-link to="/services/webdesign"
-                                            >Web Design</router-link
-                                        >
-                                    </li>
-                                    <li>
-                                        <router-link
-                                            to="/services/web-development"
-                                            >Web Development</router-link
-                                        >
-                                    </li>
-                                    <li>
-                                        <router-link to="/services/UX-UI"
-                                            >UX/UI</router-link
-                                        >
-                                    </li>
-                                    <li>
-                                        <router-link to="/services/photography"
-                                            >Photography</router-link
-                                        >
-                                    </li>
-                                    <li>
-                                        <router-link to="/services/videography"
-                                            >Videography</router-link
-                                        >
-                                    </li>
-                                </ul>
-                            </transition>
-                        </div> -->
-                        <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/portfolio"
-                                >Portfolio</router-link
-                            >
-                        </div>
-                        <div class="header--nav-box_box">
-                            <router-link class="nav-header" to="/contact"
-                                >Contact</router-link
-                            >
-                        </div>
-                        <div class="header--nav-box_box">
-                            <router-link class="nav-quote" to="/quote"
-                                >Free Quote</router-link
-                            >
-                        </div>
-                    </nav>
-                </transition>
-            </section>
         </header>
         <router-view v-slot="{ Component }">
             <transition
@@ -205,8 +129,6 @@
 export default {
     data() {
         return {
-            show: false,
-            collapse: false,
             loading: true,
         };
     },
