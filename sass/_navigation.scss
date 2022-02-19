@@ -16,16 +16,16 @@
         width: 1rem;
         height: 1rem;
         transition: background-color 0.5s ease-out;
-        @include phone-only {
+       /*  @include phone-only {
             width: 2rem;
             height: 2rem;
             top: -1.5rem;
             right: 7rem;
-        }
+        } */
         &::before {
             display: block;
-            margin-left: 0.8rem;
-            margin-top: 0.5rem;
+            margin-left: 4rem;
+            margin-top: 0.3rem;
             content: '||';
             transform: rotate(90deg);
             font-size: 200%;
@@ -33,12 +33,12 @@
             font-weight: bold;
             letter-spacing: -0.4rem;
             transition: color 0.5s ease-in-out;
-            @include phone-only {
+           /*  @include phone-only {
                 background-color: $color-primary;
                 padding-left: 1rem;
                 height: 5rem;
                 width: 5rem;
-            }
+            } */
         }
         &:hover {
             background-color: transparent;
@@ -61,15 +61,15 @@
         background-repeat: no-repeat;
         background-position: right;
         background-size: 90vw;
-        @include phone-only {
-            top: 6rem;
+         @include phone-only {
+            //top: 6rem;
             flex-direction: column;
             justify-content: center;
             background-color: $color-primary;
-            height: calc(100vh - 10rem);
+            height: 100vh;
             background-size: 180%;
             background-position: -10% 90%;
-        }
+        } 
         @include tablet-landscape-up {
             flex-direction: column;
         }
@@ -82,11 +82,11 @@
             font-size: 100%;
             letter-spacing: 0.1rem;
             text-transform: uppercase;
-            max-width: 30vw;
-            @include phone-only {
+            //max-width: 30vw;
+            /* @include phone-only {
                 max-width: 100%;
                 background-color: transparent;
-            }
+            } */
             @include tablet-portrait-up {
                 max-width: 100%;
             }
@@ -109,17 +109,17 @@
                         background-color: transparent;
                     }
                 }
-                @include phone-only {
+                /* @include phone-only {
                     width: 100%;
                     justify-content: center;
-                }
+                } */
             }
         } // Vue active state
         .router-link-exact-active {
-            color: $color-primary !important;
+            color: $color-secondary!important;
             background-color: transparent;
             &:hover {
-                color: $color-primary !important;
+                color: $color-primary!important;
                 background-color: transparent;
             }
         }

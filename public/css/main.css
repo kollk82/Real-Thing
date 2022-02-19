@@ -560,19 +560,17 @@ button:active {
   width: 1rem;
   height: 1rem;
   transition: background-color 0.5s ease-out;
-}
-@media (max-width: 599px) {
-  .navbar-icon {
-    width: 2rem;
-    height: 2rem;
-    top: -1.5rem;
-    right: 7rem;
-  }
+  /*  @include phone-only {
+       width: 2rem;
+       height: 2rem;
+       top: -1.5rem;
+       right: 7rem;
+   } */
 }
 .navbar-icon::before {
   display: block;
-  margin-left: 0.8rem;
-  margin-top: 0.5rem;
+  margin-left: 4rem;
+  margin-top: 0.3rem;
   content: "||";
   transform: rotate(90deg);
   font-size: 200%;
@@ -580,14 +578,12 @@ button:active {
   font-weight: bold;
   letter-spacing: -0.4rem;
   transition: color 0.5s ease-in-out;
-}
-@media (max-width: 599px) {
-  .navbar-icon::before {
-    background-color: #f2f2f2;
-    padding-left: 1rem;
-    height: 5rem;
-    width: 5rem;
-  }
+  /*  @include phone-only {
+       background-color: $color-primary;
+       padding-left: 1rem;
+       height: 5rem;
+       width: 5rem;
+   } */
 }
 .navbar-icon:hover {
   background-color: transparent;
@@ -612,11 +608,10 @@ button:active {
 }
 @media (max-width: 599px) {
   .navbar-box {
-    top: 6rem;
     flex-direction: column;
     justify-content: center;
     background-color: #f2f2f2;
-    height: calc(100vh - 10rem);
+    height: 100vh;
     background-size: 180%;
     background-position: -10% 90%;
   }
@@ -637,13 +632,10 @@ button:active {
   font-size: 100%;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  max-width: 30vw;
-}
-@media (max-width: 599px) {
-  .navbar-box_box {
-    max-width: 100%;
-    background-color: transparent;
-  }
+  /* @include phone-only {
+      max-width: 100%;
+      background-color: transparent;
+  } */
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .navbar-box_box {
@@ -660,6 +652,10 @@ button:active {
   color: #ba761c;
   background-color: transparent;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  /* @include phone-only {
+      width: 100%;
+      justify-content: center;
+  } */
 }
 .navbar-box_box .nav-header:hover {
   color: #f2f2f2;
@@ -670,14 +666,8 @@ button:active {
     background-color: transparent;
   }
 }
-@media (max-width: 599px) {
-  .navbar-box_box .nav-header {
-    width: 100%;
-    justify-content: center;
-  }
-}
 .navbar-box .router-link-exact-active {
-  color: #f2f2f2 !important;
+  color: #534b4b !important;
   background-color: transparent;
 }
 .navbar-box .router-link-exact-active:hover {
@@ -705,12 +695,10 @@ button:active {
   height: 3rem;
   z-index: 9999;
   color: #1f1f1f;
-}
-@media (max-width: 599px) {
-  .header--logo {
-    height: 5rem;
-    top: 3rem;
-  }
+  /* @include phone-only {
+      height: 5rem;
+      top: 3rem;
+  } */
 }
 .header--top {
   grid-column: 1/-1;
@@ -726,19 +714,22 @@ button:active {
   left: 0;
   width: 100vw;
   overflow: hidden;
-}
-@media (max-width: 599px) {
-  .header--top {
-    padding-top: 0.3rem;
-    align-items: start;
-    height: 10rem;
-    width: 100%;
-  }
+  /* @include phone-only {
+      padding-top: 0.3rem;
+      align-items: start;
+      height: 10rem;
+      width: 100%;
+  } */
 }
 .header--top:first-child {
   font-size: 100%;
 }
 @media (max-width: 599px) {
+  .header--top a {
+    display: none;
+  }
+}
+@media (max-width: 404px) {
   .header--top a {
     display: none;
   }
@@ -752,6 +743,11 @@ button:active {
   .header--top i {
     margin: 0;
     font-size: 100%;
+  }
+}
+@media (max-width: 404px) {
+  .header--top i {
+    display: none;
   }
 }
 .header--top h4 {
@@ -775,6 +771,11 @@ button:active {
   .header--top h4 {
     font-size: 70%;
     margin: 0 1rem;
+  }
+}
+@media (max-width: 404px) {
+  .header--top h4 {
+    display: none;
   }
 }
 
