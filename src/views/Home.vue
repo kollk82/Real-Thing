@@ -2,31 +2,21 @@
     <div class="wrapper">
         <navBar></navBar>
         <div v-if="loading" class="loader"><div></div></div>
-        <section class="carousel">
-            <div class="carousel--box">
-                <!-- Carousel -->
-                <video autoplay muted loop>
-                    <source
-                        src="img/videos/ed_car.mp4"
-                        preload="metadata"
-                        type="video/mp4"
-                    />
-                </video>
-            </div>
-        </section>
+        <carousel src_hd= "ed_car.mp4" src_mobile= "mobile2.mp4"></carousel>
         <section class="heading">
             <!-- Carousel h1-->
             <h1 v-scrollanimation>Our Story...</h1>
             <div v-scrollanimation class="heading-box anime-box3">
-                <p >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Quam
-                    iste ex fuga. Natus magni est, illum dicta distinctio<br />ipsam
-                    impedit sequi, amet architecto unde quod, eveniet<br />officiis
-                    minima eaque quibusdam.<br />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem nihil voluptatibus quas ipsam sed rerum nobis optio
+                    eveniet placeat non.
                 </p>
-                <button>
-                    Read more...
-                </button>
+                <router-link to="/contact">
+                    <button>
+                        Read more...
+                    </button></router-link
+                >
             </div>
         </section>
         <!-- INTRO -->
@@ -87,17 +77,17 @@
             <main class="intro--banner">
                 <!-- Banner with some extra content and button to 'contact us' section -->
                 <div v-scrollanimation class="intro--banner-box1">
-                    <h2 >
-                        Looking for Exclusive<br />Web Design Services?
-                    </h2>
+                    <h2>Looking for Exclusive<br />Web Design Services?</h2>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Lorem, ipsum dolor sit amet consectetur
                         adipisicing elit.
                     </p>
-                    <button>
-                        Lets talk...
-                    </button>
+                    <router-link to="/contact">
+                        <button>
+                            Lets talk...
+                        </button></router-link
+                    >
                 </div>
                 <div class="intro--banner-box2">
                     <!-- Not so empty box -->
@@ -109,13 +99,13 @@
         <main class="cards">
             <!-- Packages section containing 3 cards -->
             <div class="cards--h1">
-                <h1>Eagle Packages</h1>
+                <h1>Packages</h1>
             </div>
             <div class="cards--box">
                 <div v-scrollanimation class="cards--box-card anime-box1">
                     <div class="card-logo logo1-img "></div>
                     <h2>Budget</h2>
-                    <h1>999 &#x20AC;</h1>
+                    <h1>&#x20AC;999</h1>
                     <div class="card-box">
                         <p>Maecenas posuere, purus eget eleifend.</p>
                         <p>Integer eu odio viverra, accumsan est.</p>
@@ -132,10 +122,10 @@
                         find out more..
                     </button>
                 </div>
-                <div  v-scrollanimation class="cards--box-card card2 anime-box2">
+                <div v-scrollanimation class="cards--box-card card2 anime-box2">
                     <div class="card-logo logo2-img"></div>
                     <h2>Pro</h2>
-                    <h1>1499 &#x20AC;</h1>
+                    <h1>&#x20AC;1499</h1>
                     <div class="card-box">
                         <p>Maecenas posuere, purus eget eleifend.</p>
                         <p>Integer eu odio viverra, accumsan est.</p>
@@ -153,7 +143,7 @@
                 <div v-scrollanimation class="cards--box-card anime-box3">
                     <div class="card-logo logo3-img"></div>
                     <h2>Exclusive</h2>
-                    <h1>2999 &#x20AC;</h1>
+                    <h1>&#x20AC;2999</h1>
                     <div class="card-box ">
                         <p>Maecenas posuere, purus eget eleifend.</p>
                         <p>Integer eu odio viverra, accumsan est.</p>
@@ -194,11 +184,11 @@
 </template>
 
 <script>
+import carousel from '../components/carousel.vue';
 import navBar from '../components/navBar.vue';
 import loader from '../mixins/loader';
-
 export default {
-  components: { navBar },
+    components: { navBar, carousel },
     extends: loader,
 };
 </script>

@@ -1,3 +1,86 @@
+.form--wrapper {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .contact {
+        height: 100%;
+        flex-direction: column;
+        margin-bottom: 15rem;
+        @include phone-only{
+            width: 100%;
+            margin-bottom: 10.5rem;
+        }
+        input,
+        textarea {
+            width: 50vw;
+            padding: 1.3rem;
+            @include phone-only {
+                width: 80vw;
+            }
+            &::placeholder {
+                color: $color-secondary;
+            }
+            &:focus {
+                background-color: transparent;
+                color: $font-primary-icons;
+            }
+            // fix for webkit autofill
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            textarea:-webkit-autofill,
+            textarea:-webkit-autofill:hover,
+            textarea:-webkit-autofill:focus,
+            select:-webkit-autofill,
+            select:-webkit-autofill:hover,
+            select:-webkit-autofill:focus {
+                border: none;
+                -webkit-text-fill-color: $font-primary-icons;
+                box-shadow: 0 0 0px 1000px $bg-color-box inset;
+            }
+        }
+        .skew,
+        .skew-textarea {
+            border-radius: 2px 0 0 2px;
+            border: 1px solid $font-primary-icons;
+            outline: none;
+            background-color: inherit;
+            margin: 1rem;
+        }
+        .skew-textarea {
+            transform: skew(5deg);
+        }
+        .skew {
+            transform: skew(10deg);
+        }
+        input {
+            transform: skew(-10deg);
+            margin-left: 1rem;
+        }
+        textarea {
+            height: 20rem;
+            resize: none;
+            margin: 1rem 0 2rem 0;
+            overflow: auto;
+            transform: skew(-5deg);
+            @include phone-only {
+                margin: 0;
+            }
+        }
+        button {
+            width: calc(100% - 3rem);
+            margin-right: -2rem;
+            @include phone-only {
+                width: calc(90vw - 3.2rem);
+                margin: 0 0 0 1.8rem;
+            }
+        }
+    }
+}
 .sub,
 .contact {
     display: flex;
@@ -26,65 +109,13 @@
     height: 5rem;
     margin: auto;
     margin-top: 2rem;
+
+    @include phone-only {
+        width: 100%;
+    }
     input {
         padding: 1.4rem;
         font-size: 91%;
         border: 1px solid $font-primary-icons;
-    }
-}
-.contact {
-    height: 100vh;
-    flex-direction: column;
-    input,
-    textarea {
-        width: 50vw;
-        padding: 1.3rem;
-        &::placeholder {
-            color: $color-secondary;
-        }
-        &:focus {
-            background-color: transparent;
-            color: $font-primary-icons;
-        }
-        // fix for webkit autofill
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus,
-        select:-webkit-autofill,
-        select:-webkit-autofill:hover,
-        select:-webkit-autofill:focus {
-            border: none;
-            -webkit-text-fill-color: $font-primary-icons;
-            box-shadow: 0 0 0px 1000px $bg-color-box inset;
-            //transition: background-color 1s ease-in-out 1s;
-        }
-    }
-    .skew {
-        transform: skew(10deg);
-        border-radius: 2px 0 0 2px;
-        border: 1px solid $font-primary-icons;
-        outline: none;
-        background-color: inherit;
-        margin: 1rem;
-    }
-    input {
-        transform: skew(-10deg);
-        margin-left: 1rem;
-        &::placeholder {
-            transform: skew(0deg);
-        }
-    }
-    textarea {
-        height: 20rem;
-        resize: none;
-        border: 1px solid $font-primary-icons;
-        margin: 1rem 0 2rem 0;
-    }
-    button {
-        width: calc(100% - 3rem);
-        margin: 0 auto;
     }
 }

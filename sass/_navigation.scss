@@ -1,91 +1,127 @@
 .navbar {
     display: block;
     position: fixed;
-    right: 0rem;
+    right: 0;
     top: 4rem;
-    height: 10rem;
-    z-index: 999;
+    width: max-content;
+    height: auto;
+    z-index: 9999;
     cursor: pointer;
+
     &-icon {
         display: block;
         position: absolute;
-        right: 0rem;
-        width: 2.5rem;
-        height: 10rem;
-        background-color: $font-primary-icons;
-        transition: all 0.3s ease-out;
+        right: 5.5rem;
+        top: -6rem;
+        width: 1rem;
+        height: 1rem;
+        transition: background-color 0.5s ease-out;
+        @include phone-only {
+            width: 2rem;
+            height: 2rem;
+            top: -1.5rem;
+            right: 7rem;
+        }
         &::before {
             display: block;
-            position: relative;
-            content: 'NAVBAR';
+            margin-left: 0.8rem;
+            margin-top: 0.5rem;
+            content: '||';
             transform: rotate(90deg);
-            font-size: 100%;
-            color: $bg-color-box;
-            letter-spacing: 0.4rem;
-            margin-top: 1rem;
-            transition: color 0.3s ease-out, transform 0.3s ease-in-out;
+            font-size: 200%;
+            color: $bg-color;
+            font-weight: bold;
+            letter-spacing: -0.4rem;
+            transition: color 0.5s ease-in-out;
+            @include phone-only {
+                background-color: $color-primary;
+                padding-left: 1rem;
+                height: 5rem;
+                width: 5rem;
+            }
         }
         &:hover {
-            background-color: $color-primary;
-            &::before {
-                color: $font-primary-icons;
-            }
-        }&:active{
-            background-color: $font-primary-icons;
-            &::before {
-                color: $font-primary-icons;
-            }
+            background-color: transparent;
+        }
+        &:active {
+            background-color: transparent;
         }
     }
     &-box {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
         position: relative;
-        right: 2.5rem;
-        top: 1rem;
-        width: 100%;
-        //background-color: $bg-color;
-        //border-bottom: 1px solid $font-primary-icons;
+        top: 0;
+        left: 0;
+        background-color: $color-primary;
+        background-image: url('../img/imgs/eagle-logo.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 90vw;
+        @include phone-only {
+            top: 6rem;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $color-primary;
+            height: calc(100vh - 10rem);
+            background-size: 180%;
+            background-position: -10% 90%;
+        }
+        @include tablet-landscape-up {
+            flex-direction: column;
+        }
+        @include tablet-portrait-up {
+            flex-direction: column;
+        }
         &_box {
             display: flex;
-            align-content: center;
+            align-items: center;
             font-size: 100%;
             letter-spacing: 0.1rem;
             text-transform: uppercase;
-            :not(.nav-quote) {
-                border-bottom: 1px solid $font-primary-icons;
-                border-radius: 1rem;
+            max-width: 30vw;
+            @include phone-only {
+                max-width: 100%;
+                background-color: transparent;
             }
-            .nav-header,
-            .nav-quote {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 15rem;
-                margin: 1.5rem;
-                background-color: $bg-color-box;
+            @include tablet-portrait-up {
+                max-width: 100%;
             }
             .nav-header {
                 position: relative;
-                padding: 1rem;
+                display: flex;
+                font-size: 300%;
+                letter-spacing: -0.5rem;
+                font-weight: bolder;
+                padding: 1.5rem 3rem;
                 color: $font-primary-icons;
+                background-color: transparent;
                 transition: color 0.3s ease-in-out,
                     background-color 0.3s ease-in-out;
+
                 &:hover {
-                    color: $bg-color;
-                    background-color: $font-primary-icons;
+                    color: $color-primary;
+                    background-color: transparent;
+                    @include phone-only {
+                        background-color: transparent;
+                    }
                 }
-            }
-            .nav-quote {
-                color: $color-primary;
-                transition: all 0.2s ease-out;
-                &:hover {
-                    color: red;
+                @include phone-only {
+                    width: 100%;
+                    justify-content: center;
                 }
             }
         } // Vue active state
         .router-link-exact-active {
-            color: $bg-color-box !important;
-            background-color: $font-primary-icons;
+            color: $color-primary !important;
+            background-color: transparent;
+            &:hover {
+                color: $color-primary !important;
+                background-color: transparent;
+            }
         }
     }
 }

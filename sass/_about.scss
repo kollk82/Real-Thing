@@ -1,19 +1,11 @@
 .about {
     grid-column: 1 / -1;
-    margin-top: 25rem;
     margin-bottom: 2rem;
-    width: 100vw;
     background-color: $bg-color-box;
 
-    h1 {
-        width: max-content;
-        padding: 2rem 4rem;
-        margin: 0 auto;
-        border: 1px solid $font-primary-icons;
-        border-radius: 2rem 2rem 0 0;
-        background-color: $bg-color-box;
-        z-index: 9;
-        position: relative;
+    @include phone-only {
+        height: 100%;
+        overflow: hidden;
     }
 
     &--team {
@@ -27,8 +19,86 @@
         height: 70vh;
         margin: -5rem auto 0 auto;
         z-index: 10;
+        @include phone-only {
+            width: 100vw;
+            height: max-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            border: 0;
+            .box-list1 {
+                border: 0 !important;
+            }
+            .box-list2 {
+                order: 2;
+            }
+            .box-img2 {
+                order: 1;
+            }
+        }
+        @include tablet-landscape-up {
+            width: 100vw;
+            height: max-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5rem 0;
+            .box-list1 {
+                border: 0 !important;
+            }
+            .box-list1 {
+                order: 2;
+            }
+            .box-img1 {
+                order: 2;
+            }
+            .box-list2 {
+                order: 2;
+            }
+            .box-img2 {
+                order: 2;
+            }
+        }
+        @include tablet-portrait-up {
+            width: 90vw;
+            height: max-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10rem 0;
+            flex-direction: column;
 
-        :last-child {
+            .box-list1 {
+                border: 0 !important;
+            }
+            .box-list2 {
+                order: 2;
+            }
+            .box-img2 {
+                order: 1;
+            }
+        }
+        @include medium-up {
+            width: 100vw;
+            height: max-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5rem 15%;
+            .box-list1 {
+                border: 0 !important;
+            }
+            .box-list1 {
+                order: 2;
+            }
+            .box-img1 {
+                order: 2;
+            }
+            .box-list2 {
+                order: 2;
+            }
+            .box-img2 {
+                order: 2;
+            }
+        }
+        .box-img2 {
             .box--img {
                 &.before-enter {
                     opacity: 0;
@@ -42,25 +112,134 @@
                 }
             }
         }
-        > :nth-child(2) {
+        > .box-list1 {
             border-right: 1px solid $border-color;
+            p {
+                display: flex;
+                justify-content: start;
+                margin: 0px;
+                width: 100%;
+            }
         }
-        > :nth-child(3) {
+        > .box-list2 {
             p {
                 display: flex;
                 justify-content: space-between;
                 margin: 0px;
+                @include phone-only {
+                    flex-direction: row-reverse;
+                    justify-content: start;
+                }
+                @include tablet-portrait-up {
+                    flex-direction: row-reverse;
+                    justify-content: start;
+                }
+                @include tablet-landscape-up {
+                    flex-direction: row-reverse;
+                    justify-content: start;
+                }
+                @include medium-up {
+                    flex-direction: row-reverse;
+                    justify-content: start;
+                }
+            }
+        }
+        > .box-list1,
+        > .box-list2 {
+            @include phone-only {
+                span {
+                    display: inline-block;
+                    width: max-content;
+                }
+            }
+            @include tablet-portrait-up {
+                span {
+                    display: inline-block;
+                    width: max-content;
+                }
+            }
+            @include tablet-landscape-up {
+                span {
+                    display: inline-block;
+                    width: max-content;
+                }
+            }
+            @include medium-up {
+                span {
+                    display: inline-block;
+                    width: max-content;
+                }
+            }
+        }
+        > .box-list1 {
+            @include phone-only {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+            @include tablet-portrait-up {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+            @include tablet-landscape-up {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+            @include medium-up {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        > .box-list2 {
+            @include phone-only {
+                span {
+                    transform: rotate(0deg);
+                }
+            }
+            @include tablet-portrait-up {
+                span {
+                    transform: rotate(0deg);
+                }
+            }
+            @include tablet-landscape-up {
+                span {
+                    transform: rotate(0deg);
+                }
+            }
+            @include medium-up {
+                span {
+                    transform: rotate(0deg);
+                }
             }
         }
         &-box {
             display: flex;
             flex-direction: column;
-            width: 40rem;
             height: 40rem;
             align-items: center;
             justify-content: center;
             position: relative;
             perspective: 10rem;
+            @include phone-only {
+                perspective: none;
+                width: 40rem;
+            }
+            @include tablet-landscape-up {
+                margin: 5rem 0;
+                width: 40rem;
+            }
+            @include tablet-portrait-up {
+                width: auto;
+                height: auto;
+                margin-bottom: 5rem;
+            }
+            @include medium-up {
+                height: max-content;
+                margin: 3.5rem;
+            }
             h2 {
                 color: $font-primary-icons;
             }
@@ -71,7 +250,24 @@
                 overflow: hidden;
                 border: 2px solid $font-primary-icons;
                 border-radius: 2rem;
-
+                @include phone-only {
+                    width: 80%;
+                    height: 80%;
+                    margin-top: 5rem;
+                }
+                @include tablet-portrait-up {
+                    margin-top: 5rem;
+                }
+                @include tablet-landscape-up {
+                    width: 80%;
+                    height: 80%;
+                    margin-top: 5rem;
+                }
+                @include medium-up {
+                    width: 30rem;
+                    height: auto;
+                    margin-top: 5rem;
+                }
                 &.before-enter {
                     opacity: 0;
                     transform: translateX(-20px) rotateY(2deg);
@@ -85,12 +281,17 @@
 
                 img {
                     display: block;
-                    width: 175%;
-                    height: 175%;
-                    object-fit: none; // default 50% 50%
+                    width: 100%;
+                    height: 100%;
                     object-position: 7rem -8rem;
-                    background-color: $color-primary;
+                    background-color: $bg-color-box;
+                    object-fit: contain;
+                    object-position: 0 0;
                     opacity: 0.8;
+                   
+                    @include tablet-portrait-up {
+                        width: 30rem;                        
+                    }
                 }
             }
 
@@ -104,12 +305,11 @@
                     width: 100%;
                     p {
                         width: 100%;
-                        font-size: 120%;
+                        font-size: 130%;
                         span {
                             margin: 0 1rem;
                             color: $font-primary-icons;
                             font-size: 160%;
-                            vertical-align: middle;
                         }
                     }
                 }
@@ -120,18 +320,34 @@
         display: flex;
         flex-direction: column;
         height: auto;
-        margin: auto;
+        margin: 8rem auto;
         width: max-content;
-        margin-top: 10rem;
+        @include phone-only {
+            margin-bottom: 2rem;
+            margin-top: 5rem;
+        }
 
         h1 {
             padding: 2rem 4rem;
-            margin-bottom: -5rem;
-            font-style: italic;
+            margin-bottom: 0;
+            @include phone-only {
+                font-size: 200%;
+                padding: 0;
+                margin: 0 auto;
+                text-align: center;
+                width: 100%;
+                font-style: normal;
+            }
         }
         > :nth-child(odd) {
             flex-direction: row;
             margin-top: 8rem;
+            @include phone-only {
+                margin: 4rem 0;
+                p {
+                    margin-top: 3.2rem !important;
+                }
+            }
 
             i.before-enter {
                 opacity: 0;
@@ -145,17 +361,34 @@
             }
             p.before-enter {
                 transform: translateY(20px) skew(10deg);
+                @include phone-only {
+                    transform: translateY(2rem) skew(0deg);
+                }
+                @include tablet-portrait-up {
+                    transform: translateY(2rem) skew(0deg);
+                }
             }
             p.enter {
                 transform: translateY(0px) skew(10deg);
+                @include phone-only {
+                    transform: translateY(0rem) skew(0deg);
+                }
+                @include tablet-portrait-up {
+                    transform: translateY(0rem) skew(0deg);
+                }
             }
             &:not(:first-child) {
-                border-right: none;
-                border-left: 2px solid $font-primary-icons;
+                //border-right: none;
+                //border-left: 2px solid $font-primary-icons;
                 margin-bottom: 8rem;
+                @include phone-only {
+                    margin-bottom: 4rem;
+                }
             }
+
             .wedo-img {
                 left: 7rem;
+
                 &.before-enter {
                     opacity: 0;
                     transform: translateX(20px);
@@ -181,9 +414,21 @@
             }
             p.before-enter {
                 transform: translateY(20px) skew(10deg);
+                @include phone-only {
+                    transform: translateY(2rem) skew(0deg);
+                }
+                @include tablet-portrait-up {
+                    transform: translateY(2rem) skew(0deg);
+                }
             }
             p.enter {
                 transform: translateY(0px) skew(10deg);
+                @include phone-only {
+                    transform: translateY(2rem) skew(0deg);
+                }
+                @include tablet-portrait-up {
+                    transform: translateY(2rem) skew(0deg);
+                }
             }
             .wedo-img {
                 left: -7rem;
@@ -202,59 +447,118 @@
         &-box {
             display: flex;
             align-items: center;
-            //justify-content: center;
+            justify-content: center;
             flex-direction: row-reverse;
             border-right: 2px solid $font-primary-icons;
-            border-bottom: 2px solid $font-primary-icons;
-            border-top: 2px solid $font-primary-icons;
+            border-left: 2px solid $font-primary-icons;
+            //border-bottom: 1px solid $font-primary-icons;
+            //border-top: 1px solid $font-primary-icons;
             height: 50rem;
             width: 75vw;
             transform: skew(-10deg);
-            border-bottom: 1px solid $font-primary-icons;
             border-radius: 5rem;
-
+            @include phone-only {
+                width: 85vw;
+                height: 50rem;
+                transform: skew(0deg);
+                flex-direction: row;
+            }
+            @include tablet-portrait-up {
+                height: 50rem;
+                transform: skew(0deg);
+                flex-direction: row;
+                margin: 0 auto;
+            }
+            @include tablet-landscape-up {
+                height: max-content;
+            }
             .wedo-txt {
                 text-align: center;
                 margin-bottom: 5rem;
+                @include phone-only {
+                    transform: skew(0deg);
+                    display: flex;
+                    flex-direction: column;
+                    justify-items: center;
+                    align-items: center;
+                    margin-bottom: 0;
+                    padding: 4rem 0;
+                }
                 h2 {
-                    margin: 3rem;
+                    margin-bottom: 3rem;
+                    @include phone-only {
+                        margin: 1rem 1rem 1rem 0;
+                    }
                     &.before-enter {
                         opacity: 0;
                         transform: translateY(-20px) skew(10deg);
                         transition: all 1s ease-in-out;
                         transition-delay: 0.5s;
+                        @include phone-only {
+                            transform: translateY(-20px) skew(0deg);
+                        }
+                        @include tablet-portrait-up {
+                            transform: translateY(-20px) skew(0deg);
+                        }
                     }
                     &.enter {
                         opacity: 1;
                         transform: translateY(0px) skew(10deg);
+                        @include phone-only {
+                            transform: translateY(-20px) skew(0deg);
+                        }
+                        @include tablet-portrait-up {
+                            transform: translateY(-20px) skew(0deg);
+                        }
                     }
                 }
                 i {
                     display: inline-block;
                     font-family: serif;
                     font-size: 100%;
+                    font-style: italic;
                     font-family: 'MainHeadlines-light';
+                    @include phone-only {
+                        width: 90%;
+                    }
                 }
                 p {
-                    margin: 2rem 7rem 0 7rem;
-                    text-align: left;
+                    max-width: 50%;
+                    margin: 2rem auto;
+                    text-align: center;
                     font-size: 120%;
                     letter-spacing: 0.2rem;
                     line-height: 3rem;
+                    @include phone-only {
+                        margin: 1rem 2rem;
+                        text-align: center;
+                        max-width: 100%;
+                    }
+                    @include tablet-portrait-up{
+                        max-width: 70%;
+                    }
                 }
             }
-
             .wedo-img {
                 display: block;
                 position: relative;
                 border: 2px solid $font-primary-icons;
                 border-radius: 2rem;
-                width: max-content;
-                height: 35rem;
+                height: 25rem;
+                min-width: 25rem;
+                max-width: 25rem;
                 overflow: hidden;
-
+                @include phone-only {
+                    display: none;
+                }
+                @include tablet-portrait-up {
+                    display: none;
+                }
+                @include tablet-landscape-up {
+                    display: none;
+                }
                 &:hover h4 {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
                 &:hover::before {
                     opacity: 1;
@@ -265,7 +569,7 @@
                     width: 100%;
                     height: 100%;
                     z-index: 99;
-                    background-color: black;
+                    background-color: rgba(0, 0, 0, 0.671);
                     opacity: 0.2;
                     transition: opacity 0.4s ease-in-out;
                 }
@@ -273,22 +577,24 @@
                     display: block;
                     z-index: 99999;
                     position: relative;
-                    top: 11rem;
-                    left: 9rem;
-                    width: 60%;
+                    height: 100%;
+                    top: calc(50% - 4rem);
+                    left: 3rem;
+                    max-width: 90%;
                     opacity: 1;
+                    transform: skew(10deg);
                     transition: opacity 0.4s ease-in-out,
                         transform 0.4s ease-in-out;
-                    font-size: 120%;
                 }
                 img {
                     display: flex;
                     position: absolute;
-                    width: 130%;
-                    top: -8rem;
-                    right: -5rem;
-                    height: auto;
-                    transform: skew(10deg);
+                    object-fit: cover;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    //transform: skew(10deg);
                 }
             }
         }

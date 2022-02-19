@@ -1,7 +1,6 @@
-/* PERNTERS SECTION WITH ICONS OR LOGOS */
+/* PERNTERS SECTION WITH ICONS, LOGOS */
 .partners {
     grid-column: 1 / -1;
-
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
@@ -10,12 +9,14 @@
     &--header {
         grid-column: 1 /-1;
         grid-row: 1;
-        //margin: 10rem 0 0 0;
-        border-top: 1px solid $border-color;
 
         h1 {
-            margin: 10rem 0;
+            margin: 0 0 10rem 0;
             text-align: center;
+            @include phone-only {
+                font-size: 300%;
+                margin: 0 0 5rem 0;
+            }
         }
     }
     &--list {
@@ -23,19 +24,58 @@
         grid-row: 2;
         margin: 0 5rem;
         display: flex;
-
-        .brands{
+        @include phone-only {
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        @include tablet-portrait-up {
+            flex-wrap: wrap;
+        }
+        @include tablet-landscape-up {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        .brands {
             flex: 1;
-            
+            @include phone-only {
+                margin: 2rem;
+                font-size: 200%;
+            }
+            @include tablet-portrait-up {
+                margin: 1.5rem;
+                font-size: 400%;
+            }
+            @include tablet-landscape-up {
+                margin: 1rem;
+                font-size: 350%;
+            }
         }
     }
-
     &--footer {
         grid-column: inherit;
         grid-row: 3;
         margin: 10rem;
+        @include phone-only {
+            margin: 5rem;
+        }
         h3 {
             text-align: center;
+            @include phone-only {
+                font-size: 80%;
+                line-height: 2.6rem;
+                letter-spacing: 0.4rem;
+                font-style: italic;
+            }
+            @include tablet-portrait-up {
+                line-height: 2.6rem;
+                letter-spacing: 0.4rem;
+                font-style: italic;
+            }
+            @include tablet-landscape-up {
+                line-height: 3rem;
+                font-style: italic;
+            }
         }
     }
 }

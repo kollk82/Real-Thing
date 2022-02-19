@@ -1,10 +1,25 @@
 <template>
     <div class="wrapper">
         <navBar></navBar>
-        <div class="portfolio">
-            <div class="portfolio--h1">
-                <h1>Portfolio</h1>
+        <div v-if="loading" class="loader"><div></div></div>
+        <carousel src_hd= "ed_car.mp4" src_mobile= "mobile3.mp4"></carousel>
+        <section class="heading">
+            <!-- Carousel h1-->
+            <h1 v-scrollanimation>Case study...</h1>
+            <div v-scrollanimation class="heading-box anime-box3">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem nihil voluptatibus quas ipsam sed rerum nobis optio
+                    eveniet placeat non.
+                </p>
+                <router-link to="/contact">
+                    <button>
+                        Read more...
+                    </button></router-link
+                >
             </div>
+        </section>
+        <div class="portfolio">
             <div class="section">
                 <div class="section--box">
                     <div v-scrollanimation class="section--box-one">
@@ -102,20 +117,18 @@
                         <img src="img/imgs/logo.png" alt="logo" />
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import carousel from '../components/carousel.vue';
+import navBar from '../components/navBar.vue';
+import loader from '../mixins/loader';
+
 export default {
-    data() {
-        return {
-            show: false,
-            collapse: false,
-            loading: true,
-        };
-    },
+    components: { navBar, carousel },
+    extends: loader,
 };
 </script>

@@ -2,15 +2,31 @@
     <div class="wrapper">
         <navBar></navBar>
         <div v-if="loading" class="loader"><div></div></div>
+        <carousel src_hd= "ed_car.mp4" src_mobile= "mobile.mp4"></carousel>
+        <section class="heading">
+            <!-- Carousel h1-->
+            <h1 v-scrollanimation>Our Team...</h1>
+            <div v-scrollanimation class="heading-box anime-box3">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem nihil voluptatibus quas ipsam sed rerum nobis optio
+                    eveniet placeat non.
+                </p>
+                <router-link to="/contact">
+                    <button>
+                        Read more...
+                    </button></router-link
+                >
+            </div>
+        </section>
         <div class="about">
-            <h1>Meet our team</h1>
             <div class="about--team">
-                <div class="about--team-box">
+                <div class="about--team-box box-img1">
                     <div v-scrollanimation class="box--img">
                         <img src="img/imgs/designer.png" alt="Designer" />
                     </div>
                 </div>
-                <div class="about--team-box">
+                <div class="about--team-box box-list1">
                     <h2 v-scrollanimation>Design</h2>
                     <ul v-scrollanimation>
                         <li>
@@ -27,7 +43,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about--team-box">
+                <div class="about--team-box box-list2">
                     <h2 v-scrollanimation>Development</h2>
                     <ul v-scrollanimation>
                         <li>
@@ -54,7 +70,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about--team-box">
+                <div class="about--team-box box-img2">
                     <div v-scrollanimation class="box--img">
                         <img
                             src="img/imgs/web-developer.png"
@@ -64,7 +80,7 @@
                 </div>
             </div>
             <div class="about--wedo">
-                <h1>What do we do</h1>
+                <h1>What do we do?</h1>
                 <div class="about--wedo-box">
                     <div class="wedo-txt">
                         <h2 v-scrollanimation>lorem inpummm</h2>
@@ -163,9 +179,12 @@
 </template>
 
 <script>
+import carousel from '../components/carousel.vue';
+import navBar from '../components/navBar.vue';
 import loader from '../mixins/loader';
 
 export default {
-    extends: loader,
+    components: { navBar, carousel },
+    extends: loader,    
 };
 </script>

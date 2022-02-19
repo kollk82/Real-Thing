@@ -2,14 +2,14 @@
 .cards {
     grid-column: 1 / -1;
     //grid-row: 3;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     background-color: $bg-color-box;
     border-bottom: 1px solid $border-color;
-    padding-bottom: 7em;
+    padding-bottom: 7rem;
     z-index: 0;
+
     &--h1 {
         grid-column: 1 / -1;
         grid-row: 1;
@@ -17,6 +17,15 @@
         h1 {
             text-align: center;
             margin: 5rem;
+            
+            @include phone-only {
+                font-size: 300%;
+                letter-spacing: -.1rem;
+                margin: 0;
+            }
+            @include tablet-portrait-up{
+                margin: 2rem 0 0 0;
+            }
         }
     }
     &--box {
@@ -25,10 +34,20 @@
         display: flex;
         vertical-align: middle;
 
+        @include phone-only {
+            overflow: hidden;
+            flex-direction: column;
+        }
+        @include tablet-portrait-up{
+            display: block;
+        }
+        @include tablet-landscape-up{
+            padding: 5rem 0;
+        }
+
         > *:not(:last-child) {
             border-right: 1px solid $border-color;
         }
-
         .card2 :last-child {
             margin-top: 2.3rem;
         }
@@ -38,6 +57,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            @include tablet-portrait-up{
+                height: max-content;
+                margin: 0 0 5rem 0;
+            }
+            h1{
+                letter-spacing: .1rem;
+            }
 
             > *:not(:last-child) {
                 margin-bottom: 3rem;
@@ -53,8 +79,11 @@
             h1 {
                 border: 1px solid $color-primary;
                 padding: 1.2rem 2.2rem;
+                @include phone-only{
+                    font-size: 250%;
+                    padding: 1rem 2rem 1.5rem 2rem;
+                }
             }
-
             .card-logo {
                 width: 15rem;
                 height: 15rem;
@@ -78,6 +107,13 @@
                     position: relative;
                     padding-left: 8rem;
                     margin-bottom: 3rem;
+                    @include phone-only {
+                        padding-left: 4rem;
+                        letter-spacing: .1rem;
+                    }
+                    @include tablet-landscape-up{
+                        padding: 0 5rem;
+                    }
                     &::after {
                         display: block;
                         position: absolute;
@@ -85,6 +121,12 @@
                         left: 5rem;
                         content: '\2714';
                         color: green;
+                        @include phone-only {
+                            left: 1.5rem;
+                        }
+                        @include tablet-landscape-up{
+                            left: 2rem;
+                        }
                     }
                 }
             }
@@ -95,6 +137,9 @@
                 cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='49' height='59' viewport='0 0 100 100' style='fill:black;font-size:29px;'><text y='50%'>\1F44D</text></svg>")
                         16 0,
                     auto; /*!emojicursor.app*/
+                @include phone-only {
+                    margin-top: 3.5rem;
+                }
             }
             .logo2-img {
                 background-image: url('../img/imgs/eagle.svg');
@@ -105,6 +150,9 @@
                 cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='49' height='59' viewport='0 0 100 100' style='fill:black;font-size:29px;'><text y='50%'>\1F60D</text></svg>")
                         16 0,
                     auto; /*!emojicursor.app*/
+                @include phone-only {
+                    margin-top: 7rem;
+                }
             }
             .logo3-img {
                 margin-top: 7rem;

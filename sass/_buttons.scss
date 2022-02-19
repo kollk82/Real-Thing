@@ -1,44 +1,45 @@
 /* BUTTONS */
-button{
+button {
+    display: block;
     outline: none;
     border: none;
     width: max-content;
     padding: 1.5rem;
     height: max-content;
-    background-color:$color-btn;
-    border-radius: .2rem;
+    background-color: $font-primary-icons;
+    border-radius: 0.2rem;
     cursor: pointer;
     font-family: 'MainText';
-    transition: all .2s;
+    transition: all 0.2s;
 
-    &:hover{
-        background-color: $font-primary-icons;
+    &:hover {
+        background-color: $color-btn;
         color: inherit;
     }
-    &:active{
-        background-color:$bg-color;
+    &:active {
+        background-color: $font-primary-icons;
     }
 }
-.btn{
-    background-color:$font-primary-icons;
+.btn {
+    background-color: $font-primary-icons;
 
-    &:hover{
-        background-color:$color-btn;
+    &:hover {
+        background-color: $color-btn;
         color: $bg-color-box;
     }
-    &:active{        
-        background-color: $bg-color;
-        color: $font-primary-dark;
+    &:active {
+        background-color: $font-primary-icons;
+        color: $color-primary;
     }
 }
-.btn-news{
-    border-radius: 0 2px 2px 0;    
+.btn-news {
+    border-radius: 0 2px 2px 0;
     border-top: 1px solid $font-primary-icons;
     border-right: 1px solid $font-primary-icons;
     border-bottom: 1px solid $font-primary-icons;
     text-transform: uppercase;
     background-color: $font-primary-icons;
-    &:hover{
+    &:hover {
         background-color: $color-primary;
         color: $border-color;
     }
